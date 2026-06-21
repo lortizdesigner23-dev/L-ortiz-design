@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>L.Ortiz Design | Creative Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(31, 31, 33, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(143, 144, 151, 0.1);
+        }
+        .orange-gradient-btn {
+            background: linear-gradient(135deg, #ff8c00 0%, #ff4500 100%);
+            box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+        }
+        .orange-gradient-btn:hover {
+            box-shadow: 0 6px 20px rgba(255, 140, 0, 0.5);
+            transform: translateY(-2px);
+        }
+        .search-glow:focus-within {
+            box-shadow: 0 0 0 4px rgba(255, 140, 0, 0.2);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131315;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #343536;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #44474d;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-surface": "#e4e2e4",
+                      "on-surface-variant": "#c5c6cd",
+                      "on-surface": "#e4e2e4",
+                      "error": "#ffb4ab",
+                      "tertiary-fixed": "#ffdcbd",
+                      "on-error": "#690005",
+                      "secondary-container": "#454747",
+                      "on-tertiary-container": "#9d7b5a",
+                      "background": "#131315",
+                      "on-secondary": "#2f3131",
+                      "on-primary-container": "#74829d",
+                      "on-error-container": "#ffdad6",
+                      "surface-container-lowest": "#0e0e10",
+                      "surface-bright": "#39393b",
+                      "secondary": "#c6c6c7",
+                      "inverse-on-surface": "#303032",
+                      "secondary-fixed-dim": "#c6c6c7",
+                      "error-container": "#93000a",
+                      "surface": "#131315",
+                      "on-primary-fixed-variant": "#39475f",
+                      "surface-container": "#1f1f21",
+                      "on-background": "#e4e2e4",
+                      "surface-container-high": "#2a2a2c",
+                      "surface-container-highest": "#343536",
+                      "tertiary": "#e7bf99",
+                      "on-tertiary-fixed": "#2b1701",
+                      "surface-tint": "#b9c7e4",
+                      "primary-fixed-dim": "#b9c7e4",
+                      "secondary-fixed": "#e2e2e2",
+                      "on-secondary-container": "#b4b5b5",
+                      "surface-dim": "#131315",
+                      "on-secondary-fixed": "#1a1c1c",
+                      "on-secondary-fixed-variant": "#454747",
+                      "tertiary-fixed-dim": "#e7bf99",
+                      "on-primary": "#233148",
+                      "primary-container": "#0a192f",
+                      "outline-variant": "#44474d",
+                      "primary": "#b9c7e4",
+                      "outline": "#8f9097",
+                      "tertiary-container": "#281400",
+                      "surface-variant": "#343536",
+                      "on-tertiary": "#432b10",
+                      "inverse-primary": "#515f78",
+                      "surface-container-low": "#1b1b1d",
+                      "primary-fixed": "#d6e3ff",
+                      "on-primary-fixed": "#0d1c32",
+                      "on-tertiary-fixed-variant": "#5d4124"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "gutter": "24px",
+                      "margin-mobile": "20px",
+                      "container-max": "1280px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "label-sm": ["Inter"],
+                      "display-lg-mobile": ["Montserrat"],
+                      "body-md": ["Inter"],
+                      "display-lg": ["Montserrat"],
+                      "headline-md": ["Montserrat"],
+                      "body-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "label-sm": ["13px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary/30">
+<!-- TopNavBar -->
+<header class="bg-surface/70 dark:bg-surface/70 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm docked full-width top-0 z-50 sticky h-20">
+<div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-full">
+<div class="flex items-center gap-12">
+<a class="flex items-center gap-2 text-headline-md font-headline-md font-bold tracking-tight text-primary dark:text-primary" href="../l.ortiz_design_home/code.html"><img src="../assets/Logo%20LOrtiz%20Desing%20trazo%20blanco.png" alt="L.Ortiz Design Logo" class="h-10 w-auto"></a>
+<nav class="hidden md:flex gap-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-sm text-label-sm" href="code.html">Marketplace</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-sm text-label-sm" href="../creative_services/code.html">Creative Services</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-sm text-label-sm" href="../l.ortiz_design_home/code.html#memberships">Memberships</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center bg-surface-container-high rounded-full px-4 py-2 search-glow transition-all">
+<span class="material-symbols-outlined text-[#ff8c00] mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-md w-64 placeholder:text-on-surface-variant" placeholder="Search premium assets..." type="text"/>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-primary/10 rounded-full p-2 transition-all">shopping_cart</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-primary/10 rounded-full p-2 transition-all">notifications</button>
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden border border-outline-variant/30 ml-2 cursor-pointer hover:scale-95 transition-transform active:scale-90">
+<img class="w-full h-full object-cover" data-alt="A professional creative director portrait with soft studio lighting, wearing a dark turtleneck. The background is a blurred minimalist office with blue and orange ambient lighting highlights, matching the professional creative studio aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt-wKWqIpZyvLyJrsE1uVZpn5F2R-pw2AV086OxBzi_ejhw2FBxeIAUyHb_wO9rYXWqfX20FzSqHkh16ezItmNj7iiNB4RItah2tCDQ5m6VKk1Sh_6kx8X2LLfzULK7YFFDi2iPytZgTwzwhu9gLyFvkbTsgLby2qeQxpmzLkR6HaD8Pf6J-ibjnh6PzDNPVD_cGz0evkHJt0Wkk_Jw5T8UYYvqugJzQIDUdUxV0RKoDETORNco8F5hcIzj1KeFtcAZIXbBw-h3PNd"/>
+</div>
+</div>
+</div>
+</header>
+<div class="flex max-w-container-max mx-auto px-gutter min-h-screen">
+<!-- SideNavBar / Categories -->
+<aside class="h-[calc(100vh-80px)] w-64 sticky top-20 hidden lg:flex flex-col border-r border-outline-variant/20 bg-surface-container-low dark:bg-surface-container-lowest p-unit gap-2 py-8">
+<div class="mb-8 px-4">
+<h3 class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-widest mb-4">Categories</h3>
+<div class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-xl font-bold transition-all hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">image</span>
+<span class="text-label-sm font-label-sm">Photos</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-xl transition-all hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">category</span>
+<span class="text-label-sm font-label-sm">Vectors</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-xl transition-all hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">layers</span>
+<span class="text-label-sm font-label-sm">PSD Files</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-xl transition-all hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">devices</span>
+<span class="text-label-sm font-label-sm">Mockups</span>
+</a>
+</div>
+</div>
+<div class="mt-auto px-4 pb-8">
+<div class="bg-surface-container-highest p-4 rounded-2xl mb-4">
+<p class="text-label-sm font-label-sm text-primary mb-2">Upgrade to Pro</p>
+<p class="text-[12px] text-on-surface-variant mb-4">Access 1M+ premium assets and exclusive fonts.</p>
+<button class="w-full py-2 orange-gradient-btn rounded-xl text-white font-label-sm text-label-sm">Join Membership</button>
+</div>
+<div class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="text-label-sm font-label-sm">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:text-error transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+<span class="text-label-sm font-label-sm">Sign Out</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 py-12 lg:px-12">
+<!-- Search Results Header -->
+<div class="flex flex-col gap-8 mb-12">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<a class="hover:text-primary transition-colors text-label-sm font-label-sm" href="#">Marketplace</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-on-surface font-semibold text-label-sm font-label-sm">Photos</span>
+</div>
+<h1 class="text-display-lg font-display-lg text-on-surface">Explore <span class="text-primary">Creative Assets</span></h1>
+<p class="text-on-surface-variant max-w-2xl text-body-lg">Curated high-quality resources for designers and visionaries. Every asset is vetted for precision and aesthetic excellence.</p>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 bg-surface-container-highest border border-outline-variant/30 rounded-full text-label-sm font-label-sm text-on-surface flex items-center gap-2">
+                            Recent
+                            <span class="material-symbols-outlined text-[14px]">close</span>
+</span>
+<span class="px-4 py-2 bg-surface-container-high hover:bg-surface-container-highest transition-colors cursor-pointer rounded-full text-label-sm font-label-sm text-on-surface-variant flex items-center gap-2">
+                            High Resolution
+                        </span>
+<span class="px-4 py-2 bg-surface-container-high hover:bg-surface-container-highest transition-colors cursor-pointer rounded-full text-label-sm font-label-sm text-on-surface-variant flex items-center gap-2">
+                            Isolated
+                        </span>
+<span class="px-4 py-2 bg-surface-container-high hover:bg-surface-container-highest transition-colors cursor-pointer rounded-full text-label-sm font-label-sm text-on-surface-variant flex items-center gap-2">
+                            Commercial Use
+                        </span>
+</div>
+<div class="flex items-center gap-3 bg-surface-container px-4 py-2 rounded-xl border border-outline-variant/20">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Sort by:</span>
+<select class="bg-transparent border-none text-label-sm font-label-sm focus:ring-0 text-on-surface cursor-pointer">
+<option>Most Popular</option>
+<option>Newest First</option>
+<option>Free Assets</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Bento / Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+<!-- Product Card 1 -->
+<div class="group relative flex flex-col glass-card rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10">
+<div class="aspect-[4/3] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A high-end 3D abstract render of swirling fluid glass in shades of deep indigo and vibrant orange. Sharp focus, macro photography style with bokeh light particles. The aesthetic is clean, professional, and sophisticated, reflecting a modern creative design studio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE5qLi7K-DrlTNSX7z6naz3HSk-gcnqX__dGXVvjlAEcI6PFAoRBjJZMs3CPPr4TYa-7F-3qUSXeB_BfwP6-qsfSgxLiiUtllzO5tEsexNiOdGce5REF-gq9ZHDO750oZuUs9kUW-IG5ZoXZ-Ik6Nv9T2wSVVAUSfq1oCCe-zPfPwAVV8ddCyNCpteKukCHRhEUXpxNtPPj_cYaFSNv0I5TTsWJDfX0GJ6v56YatqP55QlUV4ynJadRzSlfjuSG85YcCwTeg5N8WYh"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-6">
+<button class="p-3 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-[#ff8c00] transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<button class="px-6 py-3 orange-gradient-btn rounded-full text-white font-bold text-label-sm flex items-center gap-2 scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all">
+<span class="material-symbols-outlined">download</span>
+                                Quick Download
+                            </button>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-headline-md font-headline-md text-on-surface">Abstract Glass Fluid</h3>
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-[10px] font-bold uppercase">Premium</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">file_open</span>
+                                PSD / PNG
+                            </span>
+<span class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">aspect_ratio</span>
+                                8000 x 6000 px
+                            </span>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative flex flex-col glass-card rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10">
+<div class="aspect-[4/3] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A minimalist architectural photograph of a futuristic white building with sharp geometric shadows. The sky is a deep, clear blue. High contrast, sharp lines, very clean and professional. Designed to showcase high-quality architectural photography assets for a design marketplace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMYMIoXbr5hn60apI-RWAaFip4k3F_-2FaJQ7ZuvKXZ1cTVaYqIQOjiMLFlOpz5MjOZTo4S5vdg2ATuggaJcHKEZL7ZJeJSWV1b_vGl27GaLDELNI_YNicvmIrajwAqQjWC3huoUcJLLWsBnAJr3wDhz-iCoqW26n--pMCsy9AvyjzSjEdndEOh-A2A7FuZn5SWGbAXtt4YSuB348IBSQW_LgcJHZrLG01HoYd-6UTWs7rdHJxpFRW512eVnS861HmhBWuWluIAEYB"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-6">
+<button class="p-3 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-[#ff8c00] transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="px-6 py-3 orange-gradient-btn rounded-full text-white font-bold text-label-sm flex items-center gap-2 scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all">
+<span class="material-symbols-outlined">download</span>
+                                Quick Download
+                            </button>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-headline-md font-headline-md text-on-surface">Minimalist Arch Photo</h3>
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant rounded-full text-[10px] font-bold uppercase">Free</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">file_open</span>
+                                JPG / RAW
+                            </span>
+<span class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">aspect_ratio</span>
+                                5600 x 3800 px
+                            </span>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative flex flex-col glass-card rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10">
+<div class="aspect-[4/3] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A professional iPhone 15 Pro mockup floating in a dark studio setting with warm orange accent lights reflecting on the titanium frame. The screen displays a vibrant UI design. Realistic textures, soft ambient shadows, and high-quality 3D rendering for premium mockup assets." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBipQ2WVPNglWSWq3K7Oq_lXn7ZPJIMGQdAskjUY50bkGuYz1TaGRn08JlPCZLVSB0wUNK_LX-yIdR6YaoOCy6osz4SnYNxiAEHuOZkczC9q0mrcFBQnn0a8GNAmW53P8zB9TvnEaF_p8uq3j6td6zPIVF6CdQRtXpp9qHmHUgsYGTWfD293KwCjVuaWbFOpaXnI7_Jyurl2LYDUIOi8jEoZ5ngcP9XgeDIJX67UHnl6xtXEMzWNhR6jMVlXjKIw2eYUCWDuVdjQlF6"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-6">
+<button class="p-3 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-[#ff8c00] transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="px-6 py-3 orange-gradient-btn rounded-full text-white font-bold text-label-sm flex items-center gap-2 scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all">
+<span class="material-symbols-outlined">download</span>
+                                Quick Download
+                            </button>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-headline-md font-headline-md text-on-surface">iPhone Titanium Mockup</h3>
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-[10px] font-bold uppercase">Premium</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">file_open</span>
+                                PSD / Smart Object
+                            </span>
+<span class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">aspect_ratio</span>
+                                4000 x 4000 px
+                            </span>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group relative flex flex-col glass-card rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10">
+<div class="aspect-[4/3] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A macro shot of a green tropical leaf with intricate dew droplets reflecting sunlight. The lighting is soft and golden, creating a warm, lush atmosphere. Sharp detail on the leaf veins, blurred background. High resolution nature stock photography for a creative marketplace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3mCkszMPiaL_3LXiU-gaIJWwBnYd-R6vPydzmWxn-J128Vq1Lk2gN1K1YraJFNIs-ZBhnfjiC3MvrdG-JrtOXkTivkoELIAz9T7eJGsmaPLtzD326kDwt41q66WfkggssglqZUzFQcXUy0veBWK-yQET4g3jRauo-0Pny4_HXgFiVrJCELUxeb_bLMnCmfwrgMoHgQuB4JoA08Ru4-llr0eN_zq-x1sFZ9HGMsYcrDU4NYnykdnNkhRa5ZCoAtdbUG4ZGxIhMCb0Z"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-6">
+<button class="p-3 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-[#ff8c00] transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="px-6 py-3 orange-gradient-btn rounded-full text-white font-bold text-label-sm flex items-center gap-2 scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all">
+<span class="material-symbols-outlined">download</span>
+                                Quick Download
+                            </button>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-headline-md font-headline-md text-on-surface">Lush Tropics Macro</h3>
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant rounded-full text-[10px] font-bold uppercase">Free</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">file_open</span>
+                                JPG
+                            </span>
+<span class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">aspect_ratio</span>
+                                6200 x 4100 px
+                            </span>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group relative flex flex-col glass-card rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10">
+<div class="aspect-[4/3] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Creative watercolor texture background with splashes of navy blue, gold foil accents, and light orange tones on a textured paper canvas. High detail, artistic, elegant, and professional. Perfect for luxury branding and stationery design assets." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1zvQ568KxzjzfOYnSZvBYWfyjXjeV2E9vGV8y_Ayp4TAPRC5MeomGMTV8zqz-jQ50VEYFX3gfeS2JpKROvpbGSWHjWK5RqmljDpdtkn0VsyCj8Bi4IwjuS3xEmqDrisaqHPOMDkyrA9zTVA2UGvvo7L24YeR8wxoyw00QURZITYWlkgAJ1HA1Lu0ZY9QTUT15TDa9mI1AIotwon_-dO32xML5h2DIkD4l1_A1qIeje09-9PJvglm-RPTDq21vje5cntVY7CyN9FUy"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-6">
+<button class="p-3 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-[#ff8c00] transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="px-6 py-3 orange-gradient-btn rounded-full text-white font-bold text-label-sm flex items-center gap-2 scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all">
+<span class="material-symbols-outlined">download</span>
+                                Quick Download
+                            </button>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-headline-md font-headline-md text-on-surface">Artistic Texture Pack</h3>
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-[10px] font-bold uppercase">Premium</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">file_open</span>
+                                TIFF / PNG
+                            </span>
+<span class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">aspect_ratio</span>
+                                12000 x 8000 px
+                            </span>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group relative flex flex-col glass-card rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10">
+<div class="aspect-[4/3] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A professional studio lighting setup featuring a high-end designer chair in a dark, moody environment. Intense orange rim lighting outlines the silhouette of the chair. Minimalist, sophisticated furniture design photography for interior mockups and design presentations." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf-VrMMuj4LaXprQUGHYyyzITtKX_Zwnn1bLH3U-Bp3s2HgFSc52xMv1lUI23MS0NfpMZlZ9x0ULU6RNJ3seLQMSGy-koTTVTyegX32h8rK9aZ38CkTRMlR8eezSeziVdDY99KpVlEkivK7VKXcAxoTr6JOcQzH6_8r8R-UpiK3XcNRRIR8XlgW7IbeznPRyp6Mg6RUmQkwergBULngd_YTEOzeGeoiZCviuFTkoSwF12EM_hIP4WQWMpxIU6PzpSZ3ciMydZR652s"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-6">
+<button class="p-3 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-[#ff8c00] transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="px-6 py-3 orange-gradient-btn rounded-full text-white font-bold text-label-sm flex items-center gap-2 scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all">
+<span class="material-symbols-outlined">download</span>
+                                Quick Download
+                            </button>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-headline-md font-headline-md text-on-surface">Studio Lighting Chair</h3>
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-[10px] font-bold uppercase">Premium</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">file_open</span>
+                                PSD / JPG
+                            </span>
+<span class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">aspect_ratio</span>
+                                5400 x 3600 px
+                            </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination / Load More -->
+<div class="mt-20 flex flex-col items-center gap-6">
+<p class="text-on-surface-variant text-label-sm font-label-sm">Displaying 1-12 of 2,450 results</p>
+<div class="flex items-center gap-4">
+<button class="p-3 glass-card rounded-xl text-on-surface hover:text-primary transition-colors disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<div class="flex gap-2">
+<button class="w-12 h-12 bg-primary text-on-primary font-bold rounded-xl">1</button>
+<button class="w-12 h-12 glass-card hover:bg-surface-container-highest transition-colors font-bold rounded-xl">2</button>
+<button class="w-12 h-12 glass-card hover:bg-surface-container-highest transition-colors font-bold rounded-xl">3</button>
+<span class="w-12 h-12 flex items-center justify-center text-on-surface-variant">...</span>
+<button class="w-12 h-12 glass-card hover:bg-surface-container-highest transition-colors font-bold rounded-xl">24</button>
+</div>
+<button class="p-3 glass-card rounded-xl text-on-surface hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<button class="mt-4 px-12 py-4 bg-surface-container-highest border border-outline-variant/30 rounded-2xl font-bold text-on-surface hover:bg-primary/10 transition-all flex items-center gap-3">
+                    Load More Assets
+                    <span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-surface-container-highest w-full py-16 px-gutter mt-auto border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<a class="mb-6 block" href="../l.ortiz_design_home/code.html"><img src="../assets/Logo%20LOrtiz%20Desing%20trazo%20blanco.png" alt="L.Ortiz Design Logo" class="h-10 w-auto"></a>
+<p class="text-on-surface-variant text-body-md mb-8">Premium creative assets for the modern visionary. Explora. Crea. Innova.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high hover:bg-primary/20 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high hover:bg-primary/20 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-on-surface font-bold text-label-sm font-label-sm uppercase tracking-widest">Marketplace</h4>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-sm font-label-sm" href="#">New Releases</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-sm font-label-sm" href="#">Premium Vectors</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-sm font-label-sm" href="#">PSD Templates</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-sm font-label-sm" href="#">License Info</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-on-surface font-bold text-label-sm font-label-sm uppercase tracking-widest">Support</h4>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-sm font-label-sm" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-sm font-label-sm" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-sm font-label-sm" href="#">Help Center</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-sm font-label-sm" href="#">Contact Us</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-on-surface font-bold text-label-sm font-label-sm uppercase tracking-widest">Newsletter</h4>
+<p class="text-on-surface-variant text-label-sm font-label-sm mb-2">Get the latest design trends and freebies.</p>
+<div class="flex gap-2">
+<input class="bg-surface-container-low border border-outline-variant/30 rounded-xl px-4 py-2 text-label-sm font-label-sm flex-1 focus:ring-primary focus:border-primary" placeholder="Email address" type="email"/>
+<button class="p-2 orange-gradient-btn rounded-xl text-white">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto mt-16 pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-on-surface-variant text-label-sm font-label-sm">© 2024 L.Ortiz Design. Explora. Crea. Innova.</p>
+<div class="flex gap-8">
+<span class="text-[12px] text-on-surface-variant/50">Made with precision for creators worldwide.</span>
+</div>
+</div>
+</footer>
+<!-- FAB (Suppressed on details/transactions, shown here for quick search/help) -->
+<button class="fixed bottom-8 right-8 w-14 h-14 orange-gradient-btn rounded-full text-white shadow-2xl flex items-center justify-center z-50 hover:scale-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined">help_center</span>
+</button>
+<script>
+        // Micro-interactions
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+
+        // Search Bar focus effect
+        const searchInput = document.querySelector('input[type="text"]');
+        searchInput.addEventListener('focus', () => {
+            searchInput.parentElement.classList.add('w-80');
+        });
+        searchInput.addEventListener('blur', () => {
+            searchInput.parentElement.classList.remove('w-80');
+        });
+
+        // Favorite toggle
+        document.querySelectorAll('button .material-symbols-outlined').forEach(icon => {
+            if(icon.innerText === 'favorite') {
+                icon.parentElement.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isFilled = icon.style.fontVariationSettings.includes("'FILL' 1");
+                    icon.style.fontVariationSettings = isFilled ? "'FILL' 0" : "'FILL' 1";
+                    icon.classList.toggle('text-[#ff8c00]');
+                });
+            }
+        });
+    </script>
+</body></html>

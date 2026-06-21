@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Dashboard | L.Ortiz Design</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#e4e2e4",
+                    "on-surface-variant": "#c5c6cd",
+                    "on-surface": "#e4e2e4",
+                    "error": "#ffb4ab",
+                    "tertiary-fixed": "#ffdcbd",
+                    "on-error": "#690005",
+                    "secondary-container": "#454747",
+                    "on-tertiary-container": "#9d7b5a",
+                    "background": "#131315",
+                    "on-secondary": "#2f3131",
+                    "on-primary-container": "#74829d",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-lowest": "#0e0e10",
+                    "surface-bright": "#39393b",
+                    "secondary": "#c6c6c7",
+                    "inverse-on-surface": "#303032",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "error-container": "#93000a",
+                    "surface": "#131315",
+                    "on-primary-fixed-variant": "#39475f",
+                    "surface-container": "#1f1f21",
+                    "on-background": "#e4e2e4",
+                    "surface-container-high": "#2a2a2c",
+                    "surface-container-highest": "#343536",
+                    "tertiary": "#e7bf99",
+                    "on-tertiary-fixed": "#2b1701",
+                    "surface-tint": "#b9c7e4",
+                    "primary-fixed-dim": "#b9c7e4",
+                    "secondary-fixed": "#e2e2e2",
+                    "on-secondary-container": "#b4b5b5",
+                    "surface-dim": "#131315",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "on-secondary-fixed-variant": "#454747",
+                    "tertiary-fixed-dim": "#e7bf99",
+                    "on-primary": "#233148",
+                    "primary-container": "#0a192f",
+                    "outline-variant": "#44474d",
+                    "primary": "#b9c7e4",
+                    "outline": "#8f9097",
+                    "tertiary-container": "#281400",
+                    "surface-variant": "#343536",
+                    "on-tertiary": "#432b10",
+                    "inverse-primary": "#515f78",
+                    "surface-container-low": "#1b1b1d",
+                    "primary-fixed": "#d6e3ff",
+                    "on-primary-fixed": "#0d1c32",
+                    "on-tertiary-fixed-variant": "#5d4124"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "margin-mobile": "20px",
+                    "container-max": "1280px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Inter"],
+                    "display-lg-mobile": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "display-lg": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "label-sm": ["13px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #131315;
+            color: #e4e2e4;
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-panel {
+            background: rgba(31, 31, 33, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(143, 144, 151, 0.1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+<!-- Sidebar Navigation -->
+<aside class="bg-surface-container-low dark:bg-surface-container-lowest h-screen w-64 fixed left-0 top-0 hidden lg:flex flex-col border-r border-outline-variant/20 shadow-lg z-40">
+<div class="flex flex-col h-full p-unit gap-2">
+<!-- Header Identity -->
+<div class="px-4 py-6 mb-4">
+<a href="../l.ortiz_design_home/code.html" class="text-headline-md font-headline-md text-primary font-bold hover:opacity-80 transition-opacity block">L.Ortiz Dashboard</a>
+<p class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Creative Account</p>
+</div>
+<!-- Main Nav -->
+<nav class="flex-1 space-y-1 px-2">
+<a class="bg-primary-container text-on-primary-container rounded-xl font-bold flex items-center gap-3 px-4 py-3 transition-all active:scale-98" href="#">
+<span class="material-symbols-outlined active-nav-icon" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="text-label-sm font-label-sm">Overview</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-container-high rounded-xl flex items-center gap-3 px-4 py-3 transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">cloud_upload</span>
+<span class="text-label-sm font-label-sm">Uploads</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-container-high rounded-xl flex items-center gap-3 px-4 py-3 transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="text-label-sm font-label-sm">Manage Users</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-container-high rounded-xl flex items-center gap-3 px-4 py-3 transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="text-label-sm font-label-sm">Orders</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-container-high rounded-xl flex items-center gap-3 px-4 py-3 transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<span class="text-label-sm font-label-sm">Statistics</span>
+</a>
+</nav>
+<!-- CTA -->
+<div class="px-2 mb-6">
+<button class="w-full bg-primary text-on-primary font-bold py-3 rounded-xl flex items-center justify-center gap-2 shadow-sm hover:opacity-90 transition-all active:scale-95">
+<span class="material-symbols-outlined">add</span>
+<span class="text-label-sm font-label-sm">New Project</span>
+</button>
+</div>
+<!-- Footer Nav -->
+<div class="px-2 pb-4 border-t border-outline-variant/10 pt-4 space-y-1">
+<a class="text-on-surface-variant hover:bg-surface-container-high rounded-xl flex items-center gap-3 px-4 py-3 transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-label-sm font-label-sm">Settings</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-container-high rounded-xl flex items-center gap-3 px-4 py-3 transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-label-sm font-label-sm">Sign Out</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="lg:ml-64 min-h-screen flex flex-col relative">
+<!-- Header -->
+<header class="bg-surface/70 dark:bg-surface/70 backdrop-blur-xl sticky top-0 z-50 border-b border-outline-variant/30 shadow-sm h-20 flex items-center">
+<div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-full">
+<div class="flex items-center gap-4">
+<button class="lg:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h2 class="text-headline-md font-headline-md font-bold tracking-tight text-primary">Admin Dashboard</h2>
+</div>
+<div class="flex items-center gap-6">
+<!-- Search Bar -->
+<div class="relative hidden md:block w-72">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary text-[20px]">search</span>
+<input class="w-full bg-surface-container-high border-none rounded-2xl py-2.5 pl-12 pr-4 text-body-md focus:ring-2 focus:ring-primary/40 transition-all placeholder:text-on-surface-variant/50" placeholder="Search analytics or users..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:bg-primary/10 p-2 rounded-full transition-all active:scale-90 relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<div class="h-10 w-10 rounded-full overflow-hidden border-2 border-primary/20">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a high-end UI/UX design director wearing a minimalist black turtleneck, set against a blurred studio background with soft orange and blue accent lights. The photography style is high-definition, professional, and corporate-creative, with sharp focus and warm skin tones that contrast with the dark ambient surroundings." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJtuzidwflZuRkvaqDr3XNxGEfHg0i7lFXH76EnqwJAlITPWaz5AzlZHMOqEyagDZ3Tnmvu8l072QCYk81pRG2e2IAffm_Q9KOGdJb5F0088MQ_CrL94VJM47a2UWd-CbgRnvO5oAnO0WeJSkmXjqPBJ3b_8T1siolDGEZtiiZYdJIjhLLWXjHAsNXd5MFrK4hMf-L9u4nKyZEMbnOIBGdI7iHzQF-NY9EnrPjWwLl6Wgruq8eOc2Ehj95A3WMXiRwzKWljbxPjUzA"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Page Content -->
+<div class="p-8 lg:p-margin-desktop flex flex-col gap-8 max-w-container-max mx-auto w-full">
+<!-- Analytics Cards (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="glass-panel p-6 rounded-2xl shadow-sm hover:shadow-lg transition-all group">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-primary/10 rounded-xl text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<span class="text-green-400 text-label-sm font-label-sm flex items-center">+12.5% <span class="material-symbols-outlined text-[16px] ml-1">trending_up</span></span>
+</div>
+<p class="text-on-surface-variant text-label-sm font-label-sm uppercase tracking-wide">Total Revenue</p>
+<h3 class="text-headline-md font-headline-md mt-1">$42,920.00</h3>
+</div>
+<!-- Card 2 -->
+<div class="glass-panel p-6 rounded-2xl shadow-sm hover:shadow-lg transition-all group">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-tertiary/10 rounded-xl text-tertiary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">group_add</span>
+</div>
+<span class="text-green-400 text-label-sm font-label-sm flex items-center">+4.2% <span class="material-symbols-outlined text-[16px] ml-1">trending_up</span></span>
+</div>
+<p class="text-on-surface-variant text-label-sm font-label-sm uppercase tracking-wide">New Users</p>
+<h3 class="text-headline-md font-headline-md mt-1">1,284</h3>
+</div>
+<!-- Card 3 -->
+<div class="glass-panel p-6 rounded-2xl shadow-sm hover:shadow-lg transition-all group">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-secondary/10 rounded-xl text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">download_for_offline</span>
+</div>
+<span class="text-red-400 text-label-sm font-label-sm flex items-center">-2.1% <span class="material-symbols-outlined text-[16px] ml-1">trending_down</span></span>
+</div>
+<p class="text-on-surface-variant text-label-sm font-label-sm uppercase tracking-wide">Total Downloads</p>
+<h3 class="text-headline-md font-headline-md mt-1">18,502</h3>
+</div>
+<!-- Card 4 -->
+<div class="glass-panel p-6 rounded-2xl shadow-sm hover:shadow-lg transition-all group">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-primary/10 rounded-xl text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">monitoring</span>
+</div>
+<span class="text-green-400 text-label-sm font-label-sm flex items-center">+8.7% <span class="material-symbols-outlined text-[16px] ml-1">trending_up</span></span>
+</div>
+<p class="text-on-surface-variant text-label-sm font-label-sm uppercase tracking-wide">Avg. Conversion</p>
+<h3 class="text-headline-md font-headline-md mt-1">4.82%</h3>
+</div>
+</div>
+<!-- Middle Section: Main Table & Upload Queue -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- User Management Table -->
+<div class="lg:col-span-2 glass-panel rounded-2xl overflow-hidden shadow-sm flex flex-col">
+<div class="px-6 py-6 border-b border-outline-variant/20 flex justify-between items-center">
+<div>
+<h4 class="text-headline-md font-headline-md">User Management</h4>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Manage your design community members</p>
+</div>
+<button class="text-primary hover:bg-primary/10 px-4 py-2 rounded-xl transition-colors text-label-sm font-label-sm">View All Users</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-surface-container-highest/50">
+<tr>
+<th class="px-6 py-4 text-label-sm font-label-sm text-on-surface-variant uppercase">User</th>
+<th class="px-6 py-4 text-label-sm font-label-sm text-on-surface-variant uppercase">Membership</th>
+<th class="px-6 py-4 text-label-sm font-label-sm text-on-surface-variant uppercase">Status</th>
+<th class="px-6 py-4 text-label-sm font-label-sm text-on-surface-variant uppercase">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-bold">EM</div>
+<div>
+<p class="font-bold text-body-md">Elena Martinez</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">elena.m@example.com</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 bg-tertiary-container text-tertiary rounded-full text-[12px] font-bold">PRO Member</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+<span class="text-body-md">Active</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">more_vert</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-bold">JR</div>
+<div>
+<p class="font-bold text-body-md">Julian Reed</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">j.reed@designco.com</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant rounded-full text-[12px] font-bold">Free Tier</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+<span class="text-body-md">Active</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">more_vert</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-bold">SL</div>
+<div>
+<p class="font-bold text-body-md">Sarah Loft</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">sarah@loft.studio</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 bg-primary-container text-primary rounded-full text-[12px] font-bold">Studio Elite</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-yellow-500"></span>
+<span class="text-body-md">Pending</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">more_vert</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Recent Upload Queue -->
+<div class="glass-panel rounded-2xl shadow-sm flex flex-col p-6">
+<h4 class="text-headline-md font-headline-md mb-2">Upload Queue</h4>
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-6">Files awaiting review and release</p>
+<div class="space-y-4 flex-1">
+<!-- Queue Item -->
+<div class="flex items-center gap-4 p-3 bg-surface-container-high rounded-xl border border-outline-variant/10 hover:border-primary/30 transition-all cursor-pointer">
+<div class="h-14 w-14 rounded-lg bg-background flex items-center justify-center border border-outline-variant/20 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A macro close-up of a vibrant 3D abstract fluid shape with iridescent textures reflecting magenta and cyan lighting. The aesthetic is clean, futuristic, and creative, suitable for a premium design asset marketplace thumbnail, with a focus on high-fidelity details and elegant movement." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNytskFCheCyx5KhaPNGsR05f-MA3YOXKfS4VUuYJQ-Fa4w4IXEdWEO_bfsRd30McV8lexMsTZszOSNHltlqxUNQenJpqsSbDXnR02Gt0C4qdFtXKFdOg1XWPYvYvlA6QHe-4j6lvaZxHomSIbOENxx3TYUS0ER2V0UW6o-btvlLKXo253zHidDI2MFLF4uP6e2sN05jRbVIIFDP8REdXmtw-rN0HDYxACkvgk8NcI0ZXBimrBfBBxy9X5ZaVeLTsewFZohP1QbOE4"/>
+</div>
+<div class="flex-1">
+<p class="text-label-sm font-label-sm font-bold truncate">Holographic Textures Pack</p>
+<p class="text-[12px] text-on-surface-variant">42 MB • PNG / SVG</p>
+<div class="w-full bg-surface-container-highest h-1 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full w-[75%]"></div>
+</div>
+</div>
+</div>
+<!-- Queue Item -->
+<div class="flex items-center gap-4 p-3 bg-surface-container-high rounded-xl border border-outline-variant/10 hover:border-primary/30 transition-all cursor-pointer">
+<div class="h-14 w-14 rounded-lg bg-background flex items-center justify-center border border-outline-variant/20 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A minimalist architectural 3D render of a modern workspace with soft sunlight filtering through floor-to-ceiling windows. The color palette consists of neutral grays, warm wood accents, and soft whites, creating a serene and professional creative atmosphere. The lighting is realistic and atmospheric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJtzc__3vW2MLT_0pHflGQoYQlNelqkQY48UlfR7u-oyFp1aHWT-RzBsFcxvRFbSbUG78Y6S0ZPIzmG-zvvJ4IwD0XHHwsMD8JQfncrJr8W15ss0VOp7OmPujF-dAXSEXj5i6d9e_sEtUIRY83Ruy-eC4xKAjEsk3RKLAnfTW8OmuUrUXvtfbO-ZNZ-eiUNsJDm409GzqhkNrt8ug64zpAjDxtKNjtMBxBcTempcTjnr60QsklwAgIqIgCxsiCCTcH7e5DAfbYt372"/>
+</div>
+<div class="flex-1">
+<p class="text-label-sm font-label-sm font-bold truncate">Interior Workspace Mockups</p>
+<p class="text-[12px] text-on-surface-variant">128 MB • PSD</p>
+<div class="w-full bg-surface-container-highest h-1 rounded-full mt-2 overflow-hidden">
+<div class="bg-tertiary h-full w-[40%]"></div>
+</div>
+</div>
+</div>
+<!-- Queue Item -->
+<div class="flex items-center gap-4 p-3 bg-surface-container-high rounded-xl border border-outline-variant/10 hover:border-primary/30 transition-all cursor-pointer">
+<div class="h-14 w-14 rounded-lg bg-background flex items-center justify-center border border-outline-variant/20 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="An elegant collection of custom serif typography glyphs arranged in an artistic grid. The style is classic yet contemporary, with deep navy and antique gold color schemes. The lighting is focused and cinematic, highlighting the elegant curves and fine details of the lettering design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx9q76LOs9ECNsssR4noT7R-nfuenaN5-mkEV7Jgbwzt7TZ4HuY3yrqvZ5moIKlzoQ21cW-gtl2V-0a0c5rJPpAj6scK7AGv10KewpXR182-MvBkdJNKJ0C_gieflk5YHmklNTpupuV5d10HTwuUPd9q1lvjPAVA5DVDJknU4Tlwua2Kijng4JixDxFyv9JZjy8BSjOxIJ0KyzB9xRtxpfO9NkUe_lOBsjdodsLBwDUACpBXprxZ8BM_6xCmomn6HcKwnpnl-FlylM"/>
+</div>
+<div class="flex-1">
+<p class="text-label-sm font-label-sm font-bold truncate">Aurelius Font Family</p>
+<p class="text-[12px] text-on-surface-variant">12 MB • OTF / TTF</p>
+<div class="w-full bg-surface-container-highest h-1 rounded-full mt-2 overflow-hidden">
+<div class="bg-green-500 h-full w-full"></div>
+</div>
+</div>
+</div>
+</div>
+<button class="mt-6 w-full py-3 border-2 border-outline-variant/30 text-on-surface-variant rounded-xl font-bold text-label-sm font-label-sm hover:border-primary/50 hover:text-primary transition-all">Review All Files</button>
+</div>
+</div>
+<!-- Recent Orders Section -->
+<div class="glass-panel rounded-2xl p-8 mb-8">
+<div class="flex justify-between items-center mb-8">
+<h4 class="text-headline-md font-headline-md">Recent Orders</h4>
+<div class="flex gap-2">
+<button class="bg-surface-container-highest p-2 rounded-lg hover:bg-primary/10 transition-colors"><span class="material-symbols-outlined">filter_list</span></button>
+<button class="bg-surface-container-highest p-2 rounded-lg hover:bg-primary/10 transition-colors"><span class="material-symbols-outlined">calendar_today</span></button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Order Card -->
+<div class="bg-background rounded-2xl border border-outline-variant/10 p-5 hover:border-primary/20 transition-all flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-center mb-4">
+<span class="text-label-sm font-label-sm text-on-surface-variant">#ORD-49210</span>
+<span class="px-2 py-0.5 bg-green-500/10 text-green-500 rounded text-[11px] font-bold uppercase">Paid</span>
+</div>
+<p class="font-bold text-body-lg mb-1">$29.00</p>
+<p class="text-body-md text-on-surface-variant">UI Kit: Aurora Glassmorphism</p>
+</div>
+<div class="flex items-center gap-3 mt-6 pt-4 border-t border-outline-variant/10">
+<div class="h-8 w-8 rounded-full bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A portrait of a male graphic designer with a modern haircut and glasses, smiling confidently. The image is captured with professional lighting, featuring a high-contrast dark background with subtle blue rim lighting to highlight his profile. The overall aesthetic is clean, professional, and tech-oriented." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNtq7xyUJrYe8Dr4M2dn0dmGBkry5NV3rF6iRnw-NPNrbGeTjKec6zmp9rAzqwxe0RJCHAuP1n_GsuQjB_thy-wLgoAz2wg7r8g1D_BClzUl3W4JF1OteMv0lDTmebAInXGpf_KilDt1J_4JAwR85y5NqYVbmDDxPECtmytCGx-ocwBltbD8j4JIyrUs2nTeXsRCN45sYmFBtMAVqsbGVNvcjRjJznD-wnAWI6Fn_AfKmPdm8W53ondVbG9rtOjcK0cZXIf1HjKf4T"/>
+</div>
+<div class="text-[12px]">
+<p class="font-bold">Marco Valenz</p>
+<p class="text-on-surface-variant">2 hours ago</p>
+</div>
+</div>
+</div>
+<!-- Order Card -->
+<div class="bg-background rounded-2xl border border-outline-variant/10 p-5 hover:border-primary/20 transition-all flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-center mb-4">
+<span class="text-label-sm font-label-sm text-on-surface-variant">#ORD-49211</span>
+<span class="px-2 py-0.5 bg-yellow-500/10 text-yellow-500 rounded text-[11px] font-bold uppercase">Pending</span>
+</div>
+<p class="font-bold text-body-lg mb-1">$149.00</p>
+<p class="text-body-md text-on-surface-variant">Studio Membership (Annual)</p>
+</div>
+<div class="flex items-center gap-3 mt-6 pt-4 border-t border-outline-variant/10">
+<div class="h-8 w-8 rounded-full bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a creative entrepreneur with a sophisticated and focused expression. The background is a minimalist modern office interior with soft natural lighting. The color palette is composed of soft grays and warm cream tones, reflecting a clean and premium design aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcAKNvq-mS_YXN-MG89WFif-_PE9EBvtybBl5hOq8uw9o_gladvcwG4ykBehyDyUbatKSUSh-7tNHXP2R5vVoVeoY1WBWgCuD1qdIFV60gYqfEn0KL91MEhhc14Phvj7glkOO6cfPlSYeCbeJYJ9tj2ci2h85gx8dCA-taWPixvhXOqK5HsVCD2PTbP03EBl0KLzef9oZgYhxOLRHWIn9QXCKSAo3_ZKYaixOkIh-4T_vRUh7cDi_1UOtTlLDAgXgKCPDmrwLb4k4c"/>
+</div>
+<div class="text-[12px]">
+<p class="font-bold">Sophia Chen</p>
+<p class="text-on-surface-variant">5 hours ago</p>
+</div>
+</div>
+</div>
+<!-- Order Card -->
+<div class="bg-background rounded-2xl border border-outline-variant/10 p-5 hover:border-primary/20 transition-all flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-center mb-4">
+<span class="text-label-sm font-label-sm text-on-surface-variant">#ORD-49212</span>
+<span class="px-2 py-0.5 bg-green-500/10 text-green-500 rounded text-[11px] font-bold uppercase">Paid</span>
+</div>
+<p class="font-bold text-body-lg mb-1">$45.00</p>
+<p class="text-body-md text-on-surface-variant">Icon Set: Minimal Line Art</p>
+</div>
+<div class="flex items-center gap-3 mt-6 pt-4 border-t border-outline-variant/10">
+<div class="h-8 w-8 rounded-full bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A portrait of a creative lead with short cropped hair and a stylish minimalist outfit. The setting is a bright, sunlit art studio with large windows and white walls. The photography is airy and high-key, using a palette of whites, soft beiges, and subtle wood tones for a welcoming yet professional vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkYCzN8JcLRopRIu_q01w_0UZpXx2I3MPpXZVkgyHvYITQ5FUWNBWUc8XwhBVjtVd6ziab7v02gLf3D9J-xVvWXi8Ck4JWIBJ45eE2TJj7VrodKIgc_9KmLOc8K-3G_LIkei27JlhsSSxN0ypki7A1HKnz00QPPjAQf4A6uNLPtetDQBtGrzVnMngt1mGdRE4QJzKfTSSbb88D89AnIS7UwSR1kpY78lxj6tgHfDf5RMpV2YDibQEft5TqStUtGCugwNMTGUofMOyl"/>
+</div>
+<div class="text-[12px]">
+<p class="font-bold">James Miller</p>
+<p class="text-on-surface-variant">Yesterday</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Shell -->
+<footer class="w-full py-16 px-gutter mt-auto bg-surface-container-highest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2">
+<h3 class="text-headline-md font-headline-md text-primary font-bold mb-4">L.Ortiz Design</h3>
+<p class="text-body-md text-on-surface-variant max-w-md">Admin portal for internal studio management. Ensuring the highest standards in creative asset distribution and community support.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="text-label-sm font-label-sm text-primary uppercase">Quick Links</h5>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-md underline-offset-4 hover:underline decoration-primary" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-md underline-offset-4 hover:underline decoration-primary" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-md underline-offset-4 hover:underline decoration-primary" href="#">Help Center</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="text-label-sm font-label-sm text-primary uppercase">Contact</h5>
+<p class="text-on-surface-variant text-body-md">support@lortizdesign.com</p>
+<div class="flex gap-4 mt-2">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-all active:scale-90">share</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-all active:scale-90">info</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto mt-12 pt-8 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-label-sm font-label-sm text-on-surface-variant">© 2024 L.Ortiz Design. Explora. Crea. Innova.</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant/50">Build v2.4.0-admin</p>
+</div>
+</footer>
+</main>
+<!-- Floating Action Button for Support (Contextual) -->
+<button class="fixed bottom-8 right-8 h-14 w-14 bg-primary text-on-primary rounded-full shadow-lg flex items-center justify-center hover:scale-105 active:scale-90 transition-all z-50">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">help_center</span>
+</button>
+<script>
+        // Simple dashboard interactions
+        document.addEventListener('DOMContentLoaded', () => {
+            const tableRows = document.querySelectorAll('tbody tr');
+            tableRows.forEach(row => {
+                row.addEventListener('click', () => {
+                    // Logic for row selection or detail view
+                    console.log('Row clicked');
+                });
+            });
+
+            // Mock search highlight
+            const searchInput = document.querySelector('input[type="text"]');
+            searchInput.addEventListener('focus', () => {
+                searchInput.parentElement.classList.add('ring-2', 'ring-primary/40');
+            });
+            searchInput.addEventListener('blur', () => {
+                searchInput.parentElement.classList.remove('ring-2', 'ring-primary/40');
+            });
+        });
+    </script>
+</body></html>

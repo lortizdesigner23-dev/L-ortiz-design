@@ -1,0 +1,13 @@
+Instrucciones para tus Imágenes y Logotipo en L.Ortiz Design
+===========================================================
+
+Para reemplazar las imágenes del sitio web con tus propias fotos y logotipo, sigue estos pasos sencillos:
+
+1. Busca las imágenes o logotipos que quieras usar en tu computadora.
+2. Copia y pega tus archivos de imagen dentro de esta carpeta ("assets").
+3. Para que el sitio web las reconozca, avísame en el chat cómo se llaman tus archivos (por ejemplo: "mi_logo.png", "auto_rotulado.jpg", "letrero_led.png").
+4. Yo actualizaré el código de las páginas web (Inicio, Catálogo y Dashboard) para que carguen tus archivos locales directamente.
+
+Consejos de formato:
+- Logotipo: Se recomienda un archivo PNG con fondo transparente (por ejemplo, "logo.png").
+- Fotos de Proyectos: Archivos JPG o PNG en buena resolución.

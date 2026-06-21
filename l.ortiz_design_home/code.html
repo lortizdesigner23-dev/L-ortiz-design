@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>L.Ortiz Design | Explora. Crea. Innova.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(31, 31, 33, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(68, 71, 77, 0.3);
+        }
+        .premium-gradient {
+            background: radial-gradient(circle at top right, #233148 0%, #131315 70%);
+        }
+        .orange-glow:hover {
+            box-shadow: 0 0 20px rgba(185, 199, 228, 0.2);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #131315; }
+        ::-webkit-scrollbar-thumb { background: #343536; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #44474d; }
+    </style>
+<!-- Insert Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-surface": "#e4e2e4",
+                      "on-surface-variant": "#c5c6cd",
+                      "on-surface": "#e4e2e4",
+                      "error": "#ffb4ab",
+                      "tertiary-fixed": "#ffdcbd",
+                      "on-error": "#690005",
+                      "secondary-container": "#454747",
+                      "on-tertiary-container": "#9d7b5a",
+                      "background": "#131315",
+                      "on-secondary": "#2f3131",
+                      "on-primary-container": "#74829d",
+                      "on-error-container": "#ffdad6",
+                      "surface-container-lowest": "#0e0e10",
+                      "surface-bright": "#39393b",
+                      "secondary": "#c6c6c7",
+                      "inverse-on-surface": "#303032",
+                      "secondary-fixed-dim": "#c6c6c7",
+                      "error-container": "#93000a",
+                      "surface": "#131315",
+                      "on-primary-fixed-variant": "#39475f",
+                      "surface-container": "#1f1f21",
+                      "on-background": "#e4e2e4",
+                      "surface-container-high": "#2a2a2c",
+                      "surface-container-highest": "#343536",
+                      "tertiary": "#e7bf99",
+                      "on-tertiary-fixed": "#2b1701",
+                      "surface-tint": "#b9c7e4",
+                      "primary-fixed-dim": "#b9c7e4",
+                      "secondary-fixed": "#e2e2e2",
+                      "on-secondary-container": "#b4b5b5",
+                      "surface-dim": "#131315",
+                      "on-secondary-fixed": "#1a1c1c",
+                      "on-secondary-fixed-variant": "#454747",
+                      "tertiary-fixed-dim": "#e7bf99",
+                      "on-primary": "#233148",
+                      "primary-container": "#0a192f",
+                      "outline-variant": "#44474d",
+                      "primary": "#b9c7e4",
+                      "outline": "#8f9097",
+                      "tertiary-container": "#281400",
+                      "surface-variant": "#343536",
+                      "on-tertiary": "#432b10",
+                      "inverse-primary": "#515f78",
+                      "surface-container-low": "#1b1b1d",
+                      "primary-fixed": "#d6e3ff",
+                      "on-primary-fixed": "#0d1c32",
+                      "on-tertiary-fixed-variant": "#5d4124"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "gutter": "24px",
+                      "margin-mobile": "20px",
+                      "container-max": "1280px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "label-sm": ["Inter"],
+                      "display-lg-mobile": ["Montserrat"],
+                      "body-md": ["Inter"],
+                      "display-lg": ["Montserrat"],
+                      "headline-md": ["Montserrat"],
+                      "body-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "label-sm": ["13px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface/70 dark:bg-surface/70 backdrop-blur-xl docked full-width top-0 z-50 sticky border-b border-outline-variant/30 shadow-sm">
+<nav class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-20">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-2 text-headline-md font-headline-md font-bold tracking-tight text-primary dark:text-primary" href="code.html"><img src="../assets/Logo%20LOrtiz%20Desing%20trazo%20blanco.png" alt="L.Ortiz Design Logo" class="h-10 w-auto"></a>
+<div class="hidden lg:flex gap-6 items-center">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-sm text-label-sm" href="#">Marketplace</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-sm text-label-sm" href="#">Creative Services</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-sm text-label-sm" href="#">Memberships</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary text-body-md">search</span>
+<input class="bg-surface-container-high border-none rounded-full pl-10 pr-4 py-2 w-64 focus:ring-2 focus:ring-primary/50 text-body-md" placeholder="Search templates..." type="text"/>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant p-2 hover:bg-primary/10 rounded-full transition-all active:scale-90">shopping_cart</button>
+<button class="material-symbols-outlined text-on-surface-variant p-2 hover:bg-primary/10 rounded-full transition-all active:scale-90">notifications</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant/50 cursor-pointer hover:scale-105 transition-transform">
+<img class="w-full h-full object-cover" data-alt="A professional close-up portrait of a creative designer in a modern studio environment. The lighting is soft and directional, highlighting the contours of the face against a dark, moody background with subtle blue rim lighting. The style is high-end corporate photography with a narrow depth of field, embodying the L.Ortiz brand aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFVbNC0P8duQ1gPhPtzkeuoIEEbUUifjoFCDjDdteXSzcyzGPZiDbNe68E_Kw_QMiZFfMNEW0TG3QjLIpkR3V1OvtKTCvO8KH-G-y59pXNSZIOgtYUbyBi62-oH0HR6vsAXWZX9yFNPtPSrh6HYExKiiTMiCUle4OnmOZYeaF9QPQ7H3eeMKD2W0r7Z_vpP2IM9Uo13jmC_C94O3cYHoNJkIB8PzYoJ059RhHKCTwVEvB1HeZewgVXk6Nv-OF_LdHiUVPGqwmHfkc0"/>
+</div>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center justify-center premium-gradient overflow-hidden px-gutter">
+<!-- Background Decoration -->
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+
+</div>
+<div class="relative z-10 text-center max-w-4xl">
+<h1 class="text-display-lg-mobile md:text-display-lg font-display-lg mb-6 tracking-tight">
+                    Explora. <span class="text-primary">Crea.</span> Innova.
+                </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+                    The ultimate destination for professional design assets, creative services, and enterprise solutions. Empowering your vision since 2024.
+                </p>
+<!-- Large Search Bar -->
+<div class="relative max-w-2xl mx-auto group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary to-tertiary rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+<div class="relative flex bg-surface-container-low rounded-2xl p-2 items-center border border-outline-variant/30">
+<span class="material-symbols-outlined text-primary px-4">search</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-body-lg py-4" placeholder="Find high-quality assets, vinyls, signs..." type="text"/>
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-headline-md text-headline-md active:scale-95 transition-transform">Search</button>
+</div>
+</div>
+<div class="flex flex-wrap justify-center gap-4 mt-12">
+<span class="px-4 py-1 rounded-full bg-surface-container-highest border border-outline-variant/20 text-label-sm font-label-sm text-on-surface-variant">#LogoDesign</span>
+<span class="px-4 py-1 rounded-full bg-surface-container-highest border border-outline-variant/20 text-label-sm font-label-sm text-on-surface-variant">#CustomVinyl</span>
+<span class="px-4 py-1 rounded-full bg-surface-container-highest border border-outline-variant/20 text-label-sm font-label-sm text-on-surface-variant">#Sublimation</span>
+</div>
+</div>
+</section>
+<!-- Featured Projects -->
+<section class="py-24 px-gutter max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-headline-md font-headline-md mb-2">Featured Projects</h2>
+<p class="text-on-surface-variant">Curated masterworks from our creative laboratory.</p>
+</div>
+<button class="text-primary font-label-sm text-label-sm flex items-center gap-2 hover:underline">
+                    View Portfolio <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project 1 -->
+<div class="group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Manta publicitaria de Hugo Ricardo fabricada por L.Ortiz Design." src="../assets/Manta%20Hugo%20Ricardo.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+<button class="bg-primary text-on-primary-fixed w-12 h-12 rounded-full flex items-center justify-center"><span class="material-symbols-outlined">visibility</span></button>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-headline-md font-headline-md mb-2">Manta Publicitaria - Hugo Ricardo</h3>
+<p class="text-on-surface-variant text-label-sm font-label-sm">Impresión en Lona / Gran Formato</p>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Manta de Julito Comedor fabricada por L.Ortiz Design." src="../assets/Manta%20Julito%20Comedor.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+<button class="bg-primary text-on-primary-fixed w-12 h-12 rounded-full flex items-center justify-center"><span class="material-symbols-outlined">visibility</span></button>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-headline-md font-headline-md mb-2">Manta Comercial - Julito Comedor</h3>
+<p class="text-on-surface-variant text-label-sm font-label-sm">Publicidad Exterior / Eventos</p>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Manta publicitaria personalizada L.Ortiz." src="../assets/para%20mantas%20lortiz.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+<button class="bg-primary text-on-primary-fixed w-12 h-12 rounded-full flex items-center justify-center"><span class="material-symbols-outlined">visibility</span></button>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-headline-md font-headline-md mb-2">Manta Personalizada - L.Ortiz</h3>
+<p class="text-on-surface-variant text-label-sm font-label-sm">Diseño y Producción Corporativa</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-gutter text-center mb-16">
+<h2 class="text-display-lg-mobile font-display-lg mb-4">Our Creative Ecosystem</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto">From concept to reality, we provide a full spectrum of creative services for your brand.</p>
+</div>
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Service 1: Printing -->
+<div class="p-8 rounded-3xl bg-surface transition-transform hover:-translate-y-1 hover:bg-surface-container-high border border-outline-variant/10 group">
+<div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary">print</span>
+</div>
+<h4 class="text-headline-md font-headline-md mb-4">Printing</h4>
+<p class="text-on-surface-variant text-body-md mb-6">High-precision digital and offset printing for marketing materials that command attention.</p>
+<ul class="space-y-2 mb-8">
+<li class="flex items-center gap-2 text-label-sm font-label-sm"><span class="material-symbols-outlined text-[16px] text-primary">check_circle</span> Business Cards</li>
+<li class="flex items-center gap-2 text-label-sm font-label-sm"><span class="material-symbols-outlined text-[16px] text-primary">check_circle</span> Flyers &amp; Brochures</li>
+</ul>
+</div>
+<!-- Service 2: Vinyl -->
+<div class="p-8 rounded-3xl bg-surface transition-transform hover:-translate-y-1 hover:bg-surface-container-high border border-outline-variant/10 group">
+<div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary">layers</span>
+</div>
+<h4 class="text-headline-md font-headline-md mb-4">Vinyl</h4>
+<p class="text-on-surface-variant text-body-md mb-6">Expertly installed vinyl graphics for vehicles, windows, and interior spaces.</p>
+<ul class="space-y-2 mb-8">
+<li class="flex items-center gap-2 text-label-sm font-label-sm"><span class="material-symbols-outlined text-[16px] text-primary">check_circle</span> Vehicle Wraps</li>
+<li class="flex items-center gap-2 text-label-sm font-label-sm"><span class="material-symbols-outlined text-[16px] text-primary">check_circle</span> Floor Graphics</li>
+</ul>
+</div>
+<!-- Service 3: Signs -->
+<div class="p-8 rounded-3xl bg-surface transition-transform hover:-translate-y-1 hover:bg-surface-container-high border border-outline-variant/10 group">
+<div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary">signpost</span>
+</div>
+<h4 class="text-headline-md font-headline-md mb-4">Signs</h4>
+<p class="text-on-surface-variant text-body-md mb-6">Innovative signage solutions that define your physical presence with style.</p>
+<ul class="space-y-2 mb-8">
+<li class="flex items-center gap-2 text-label-sm font-label-sm"><span class="material-symbols-outlined text-[16px] text-primary">check_circle</span> 3D Channel Letters</li>
+<li class="flex items-center gap-2 text-label-sm font-label-sm"><span class="material-symbols-outlined text-[16px] text-primary">check_circle</span> Pylon Signs</li>
+</ul>
+</div>
+<!-- Service 4: Sublimation -->
+<div class="p-8 rounded-3xl bg-surface transition-transform hover:-translate-y-1 hover:bg-surface-container-high border border-outline-variant/10 group">
+<div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary">checkroom</span>
+</div>
+<h4 class="text-headline-md font-headline-md mb-4">Sublimation</h4>
+<p class="text-on-surface-variant text-body-md mb-6">Permanent, vibrant color application for apparel and personalized merchandise.</p>
+<ul class="space-y-2 mb-8">
+<li class="flex items-center gap-2 text-label-sm font-label-sm"><span class="material-symbols-outlined text-[16px] text-primary">check_circle</span> Custom Uniforms</li>
+<li class="flex items-center gap-2 text-label-sm font-label-sm"><span class="material-symbols-outlined text-[16px] text-primary">check_circle</span> Promotional Items</li>
+</ul>
+</div>
+<!-- Service 5: Graphic Design -->
+<div class="p-8 rounded-3xl bg-surface transition-transform hover:-translate-y-1 hover:bg-surface-container-high border border-outline-variant/10 group">
+<div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary">draw</span>
+</div>
+<h4 class="text-headline-md font-headline-md mb-4">Graphic Design</h4>
+<p class="text-on-surface-variant text-body-md mb-6">Strategic visual storytelling and branding that connects with your audience.</p>
+<ul class="space-y-2 mb-8">
+<li class="flex items-center gap-2 text-label-sm font-label-sm"><span class="material-symbols-outlined text-[16px] text-primary">check_circle</span> Brand Identity</li>
+<li class="flex items-center gap-2 text-label-sm font-label-sm"><span class="material-symbols-outlined text-[16px] text-primary">check_circle</span> UI/UX Design</li>
+</ul>
+</div>
+<!-- Service 6: Computer Sales -->
+<div class="p-8 rounded-3xl bg-surface transition-transform hover:-translate-y-1 hover:bg-surface-container-high border border-outline-variant/10 group">
+<div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary">desktop_windows</span>
+</div>
+<h4 class="text-headline-md font-headline-md mb-4">Computer Sales</h4>
+<p class="text-on-surface-variant text-body-md mb-6">High-performance workstations curated for creative professionals.</p>
+<ul class="space-y-2 mb-8">
+<li class="flex items-center gap-2 text-label-sm font-label-sm"><span class="material-symbols-outlined text-[16px] text-primary">check_circle</span> Design Stations</li>
+<li class="flex items-center gap-2 text-label-sm font-label-sm"><span class="material-symbols-outlined text-[16px] text-primary">check_circle</span> Tech Support</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Memberships Teaser -->
+<section class="py-24 px-gutter max-w-container-max mx-auto overflow-hidden">
+<div class="text-center mb-16">
+<h2 class="text-display-lg-mobile md:text-display-lg font-display-lg mb-4">Creative Pass</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto">Unlock exclusive assets and priority services with our membership plans.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Free -->
+<div class="p-10 rounded-[32px] glass-card border border-outline-variant/20 flex flex-col items-center text-center">
+<span class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest mb-4">Starter</span>
+<h3 class="text-headline-md font-headline-md mb-2">Free</h3>
+<p class="text-on-surface-variant mb-8">Basic access to free assets.</p>
+<div class="text-4xl font-bold mb-8">$0<span class="text-body-md font-normal text-on-surface-variant">/mo</span></div>
+<ul class="text-left space-y-4 mb-10 w-full">
+<li class="flex items-center gap-3 text-label-sm font-label-sm"><span class="material-symbols-outlined text-primary">check</span> Standard Asset Downloads</li>
+<li class="flex items-center gap-3 text-label-sm font-label-sm"><span class="material-symbols-outlined text-primary">check</span> Community Forum Access</li>
+</ul>
+<button class="w-full py-4 border border-outline-variant rounded-2xl hover:bg-surface-container-high transition-colors font-headline-md text-headline-md active:scale-95">Get Started</button>
+</div>
+<!-- Creator (Featured) -->
+<div class="p-10 rounded-[32px] bg-primary-container relative border-2 border-primary flex flex-col items-center text-center scale-105 shadow-2xl">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-4 py-1 rounded-full text-label-sm font-label-sm">MOST POPULAR</div>
+<span class="text-primary font-label-sm text-label-sm uppercase tracking-widest mb-4">Artist</span>
+<h3 class="text-headline-md font-headline-md mb-2">Creator</h3>
+<p class="text-on-primary-container mb-8">Enhanced tools for growing studios.</p>
+<div class="text-4xl font-bold mb-8">$29<span class="text-body-md font-normal text-on-primary-container">/mo</span></div>
+<ul class="text-left space-y-4 mb-10 w-full">
+<li class="flex items-center gap-3 text-label-sm font-label-sm"><span class="material-symbols-outlined text-primary">check</span> 10 Premium Assets / mo</li>
+<li class="flex items-center gap-3 text-label-sm font-label-sm"><span class="material-symbols-outlined text-primary">check</span> 10% Discount on Services</li>
+<li class="flex items-center gap-3 text-label-sm font-label-sm"><span class="material-symbols-outlined text-primary">check</span> Priority Support</li>
+</ul>
+<button class="w-full py-4 bg-primary text-on-primary rounded-2xl hover:shadow-lg transition-all font-headline-md text-headline-md active:scale-95">Go Pro Now</button>
+</div>
+<!-- Premium -->
+<div class="p-10 rounded-[32px] glass-card border border-outline-variant/20 flex flex-col items-center text-center">
+<span class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest mb-4">Agency</span>
+<h3 class="text-headline-md font-headline-md mb-2">Premium</h3>
+<p class="text-on-surface-variant mb-8">Unrestricted creative freedom.</p>
+<div class="text-4xl font-bold mb-8">$79<span class="text-body-md font-normal text-on-surface-variant">/mo</span></div>
+<ul class="text-left space-y-4 mb-10 w-full">
+<li class="flex items-center gap-3 text-label-sm font-label-sm"><span class="material-symbols-outlined text-primary">check</span> Unlimited Premium Assets</li>
+<li class="flex items-center gap-3 text-label-sm font-label-sm"><span class="material-symbols-outlined text-primary">check</span> 25% Discount on Services</li>
+<li class="flex items-center gap-3 text-label-sm font-label-sm"><span class="material-symbols-outlined text-primary">check</span> Dedicated Account Manager</li>
+</ul>
+<button class="w-full py-4 border border-outline-variant rounded-2xl hover:bg-surface-container-high transition-colors font-headline-md text-headline-md active:scale-95">Contact Sales</button>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 bg-surface-container-high overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row gap-16 items-center">
+<div class="md:w-1/3">
+<h2 class="text-display-lg-mobile md:text-headline-md font-headline-md mb-6">Trusted by Innovators</h2>
+<p class="text-on-surface-variant mb-8">Read what our global community of designers and business owners have to say.</p>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary/10 transition-colors"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary/10 transition-colors"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="md:w-2/3 flex gap-8">
+<div class="p-10 rounded-[40px] bg-surface flex flex-col gap-6 min-w-[400px]">
+<div class="flex gap-1 text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-lg font-body-lg italic">"L.Ortiz Design transformed our local shop with their vinyl work. The attention to detail is unlike anything else in the industry."</p>
+<div class="flex items-center gap-4 mt-auto">
+<div class="w-12 h-12 rounded-full bg-secondary-container">
+<img class="w-full h-full rounded-full object-cover" data-alt="Close-up headshot of a female entrepreneur, early 30s, looking confidently at the camera. Professional workspace in the background with soft bokeh. Soft, warm natural lighting from a nearby window, professional portrait style, modern and bright aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh0mP9llo39REeZnesKzEUEH7jWfJz3LM7UeFp4OG8Zsn4BNmM3RFkEMtKFKH84IvaOYlZjrZT0JJM-kCWi6uVLFbGnX4-6ZaXQRNQK6omNVGivsdcyq026rKovpGCJrrDm2gx3LgoocNJFskzcf-NRLJuUP5F2lLXQedUkX5ysZRBaF93NRJ1j0crTPW5y6H60mArUd32OZICGK9YOmax1EYWm20uBpsPboRjtupZ7Wloo3KG6r5uVMx2L8IY76-eL-L2TKap5G2w"/>
+</div>
+<div>
+<h5 class="font-bold">Elena Rodriguez</h5>
+<p class="text-label-sm font-label-sm text-on-surface-variant">CEO, Blue Horizon</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-gutter">
+<div class="max-w-container-max mx-auto rounded-[64px] bg-primary p-16 md:p-24 text-center relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+
+</div>
+<div class="relative z-10">
+<h2 class="text-display-lg-mobile md:text-display-lg font-display-lg text-on-primary mb-8">Ready to innovate your brand?</h2>
+<p class="text-on-primary/80 text-body-lg font-body-lg max-w-xl mx-auto mb-12">
+                        Join over 5,000+ creators and businesses building the future of design with L.Ortiz.
+                    </p>
+<div class="flex flex-wrap justify-center gap-6">
+<button class="px-12 py-5 bg-surface text-on-surface rounded-2xl font-headline-md text-headline-md hover:shadow-xl transition-all active:scale-95">Start Project</button>
+<button class="px-12 py-5 border-2 border-surface text-surface rounded-2xl font-headline-md text-headline-md hover:bg-surface/10 transition-all active:scale-95">Explore Assets</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 px-gutter mt-auto bg-surface-container-highest dark:bg-surface-container-highest border-t border-outline-variant flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<a class="mb-6 block" href="code.html"><img src="../assets/Logo%20LOrtiz%20Desing%20trazo%20blanco.png" alt="L.Ortiz Design Logo" class="h-10 w-auto"></a>
+<p class="text-on-surface-variant text-body-md mb-8">Explora. Crea. Innova. Premium creative solutions for the modern world.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface flex items-center justify-center hover:text-primary transition-colors border border-outline-variant/30" href="#"><span class="material-symbols-outlined text-[20px]">public</span></a>
+<a class="w-10 h-10 rounded-full bg-surface flex items-center justify-center hover:text-primary transition-colors border border-outline-variant/30" href="#"><span class="material-symbols-outlined text-[20px]">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h6 class="font-bold mb-6 uppercase text-label-sm font-label-sm tracking-widest text-on-surface">Resources</h6>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors underline decoration-primary underline-offset-4" href="#">Marketplace</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors underline decoration-primary underline-offset-4" href="#">Memberships</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors underline decoration-primary underline-offset-4" href="#">Creative Assets</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors underline decoration-primary underline-offset-4" href="#">Tutorials</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-bold mb-6 uppercase text-label-sm font-label-sm tracking-widest text-on-surface">Legal</h6>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors underline decoration-primary underline-offset-4" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors underline decoration-primary underline-offset-4" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors underline decoration-primary underline-offset-4" href="#">Cookie Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors underline decoration-primary underline-offset-4" href="#">Licensing</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-bold mb-6 uppercase text-label-sm font-label-sm tracking-widest text-on-surface">Support</h6>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors underline decoration-primary underline-offset-4" href="#">Help Center</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors underline decoration-primary underline-offset-4" href="#">Contact Us</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors underline decoration-primary underline-offset-4" href="#">Request a Quote</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-16 pt-8 border-t border-outline-variant/10 text-center">
+<p class="text-on-surface-variant text-label-sm font-label-sm">© 2024 L.Ortiz Design. Explora. Crea. Innova.</p>
+</div>
+</footer>
+<script>
+        // Micro-interactions and effects
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navbar scroll effect
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    header.classList.add('shadow-md');
+                } else {
+                    header.classList.remove('shadow-md');
+                }
+            });
+
+            // Button active state interaction (already handled by Tailwind active:scale-95 but adding more if needed)
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(btn => {
+                btn.addEventListener('mouseenter', () => {
+                    // Logic for custom hover effects if needed
+                });
+            });
+        });
+    </script>
+</body></html>
