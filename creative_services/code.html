@@ -168,7 +168,7 @@
     <nav class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-20">
         <div class="flex items-center gap-8">
             <a class="flex items-center gap-2 text-headline-md font-headline-md font-bold tracking-tight text-primary dark:text-primary" href="../l.ortiz_design_home/code.html">
-                <img src="../assets/Logo%20LOrtiz%20Desing%20trazo%20blanco.png" alt="L.Ortiz Design Logo" class="h-10 w-auto">
+                <img src="../assets/Logo%20LOrtiz%20Desing%20trazo%20negro.png" alt="L.Ortiz Design Logo" class="h-10 w-auto">
             </a>
             <div class="hidden lg:flex gap-6 items-center">
                 <a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-sm text-label-sm" href="../marketplace_digital_assets/code.html">Marketplace</a>
@@ -183,9 +183,6 @@
             </div>
             <button class="material-symbols-outlined text-on-surface-variant p-2 hover:bg-primary/10 rounded-full transition-all active:scale-90">shopping_cart</button>
             <button class="material-symbols-outlined text-on-surface-variant p-2 hover:bg-primary/10 rounded-full transition-all active:scale-90">notifications</button>
-            <a href="../admin_panel/code.html" class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant/50 cursor-pointer hover:scale-105 transition-transform block">
-                <img class="w-full h-full object-cover" alt="Designer Profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFVbNC0P8duQ1gPhPtzkeuoIEEbUUifjoFCDjDdteXSzcyzGPZiDbNe68E_Kw_QMiZFfMNEW0TG3QjLIpkR3V1OvtKTCvO8KH-G-y59pXNSZIOgtYUbyBi62-oH0HR6vsAXWZX9yFNPtPSrh6HYExKiiTMiCUle4OnmOZYeaF9QPQ7H3eeMKD2W0r7Z_vpP2IM9Uo13jmC_C94O3cYHoNJkIB8PzYoJ059RhHKCTwVEvB1HeZewgVXk6Nv-OF_LdHiUVPGqwmHfkc0"/>
-            </a>
         </div>
     </nav>
 </header>
@@ -505,7 +502,7 @@
                         <!-- WhatsApp QR Code Widget -->
                         <div class="p-4 rounded-2xl bg-surface-container-high border border-outline-variant/20 flex flex-col items-center gap-3 text-center">
                             <p class="text-label-sm font-bold text-on-surface">¿Prefieres contactarnos por móvil?</p>
-                            <img src="../assets/QR%20Cel%20LOrtiz.png" alt="QR Contacto WhatsApp" class="w-32 h-32 rounded-xl border border-outline-variant/30 bg-white p-1">
+                            <img src="../assets/QR%20Cel%20LOrtiz.png" alt="QR Contacto WhatsApp" class="w-32 h-32 rounded-xl border border-outline-variant/30 bg-white p-1 hover:scale-105 transition-transform cursor-pointer" onclick="openLightbox(this.src, 'QR Contacto WhatsApp')">
                             <p class="text-[11px] text-on-surface-variant">Escanea el código QR para escribirnos directamente por WhatsApp.</p>
                         </div>
                     </div>
@@ -605,7 +602,7 @@
     <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto">
         <div class="md:col-span-1">
             <a class="mb-6 block" href="../l.ortiz_design_home/code.html">
-                <img src="../assets/Logo%20LOrtiz%20Desing%20trazo%20blanco.png" alt="L.Ortiz Design Logo" class="h-10 w-auto">
+                <img src="../assets/Logo%20LOrtiz%20Desing%20trazo%20negro.png" alt="L.Ortiz Design Logo" class="h-10 w-auto">
             </a>
             <p class="text-on-surface-variant text-body-md mb-8">Explora. Crea. Innova. Soluciones creativas premium para tu negocio físico y digital.</p>
             <div class="flex gap-4">
@@ -1099,6 +1096,50 @@
         updateQuoteSummary();
         renderSpecsFields();
     });
+
+    // Lightbox Modal functions
+    function openLightbox(src, caption) {
+        const modal = document.getElementById('lightbox-modal');
+        const img = document.getElementById('lightbox-img');
+        const cap = document.getElementById('lightbox-caption');
+        img.src = src;
+        cap.innerText = caption || '';
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        setTimeout(() => {
+            modal.classList.remove('opacity-0');
+            img.classList.remove('scale-95');
+            img.classList.add('scale-100');
+        }, 10);
+    }
+
+    function closeLightbox() {
+        const modal = document.getElementById('lightbox-modal');
+        const img = document.getElementById('lightbox-img');
+        modal.classList.add('opacity-0');
+        img.classList.remove('scale-100');
+        img.classList.add('scale-95');
+        setTimeout(() => {
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }, 300);
+    }
+
+    // Close lightbox on Esc key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeLightbox();
+    });
 </script>
+
+<!-- Lightbox Modal -->
+<div id="lightbox-modal" class="fixed inset-0 bg-black/95 z-[999] hidden items-center justify-center p-4 backdrop-blur-md opacity-0 transition-opacity duration-300">
+    <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white hover:text-primary transition-colors focus:outline-none">
+        <span class="material-symbols-outlined text-[36px]">close</span>
+    </button>
+    <div class="relative max-w-full max-h-[85vh] flex flex-col items-center">
+        <img id="lightbox-img" src="" alt="Vista Previa" class="max-w-full max-h-[80vh] rounded-2xl object-contain shadow-2xl scale-95 transition-transform duration-300 border border-outline-variant/30">
+        <p id="lightbox-caption" class="text-white text-body-lg font-headline-md mt-4 text-center tracking-wide"></p>
+    </div>
+</div>
 </body>
 </html>

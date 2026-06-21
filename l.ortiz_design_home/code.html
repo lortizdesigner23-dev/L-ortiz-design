@@ -123,7 +123,7 @@
 <header class="bg-surface/70 dark:bg-surface/70 backdrop-blur-xl docked full-width top-0 z-50 sticky border-b border-outline-variant/30 shadow-sm">
 <nav class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-20">
 <div class="flex items-center gap-8">
-<a class="flex items-center gap-2 text-headline-md font-headline-md font-bold tracking-tight text-primary dark:text-primary" href="code.html"><img src="../assets/Logo%20LOrtiz%20Desing%20trazo%20blanco.png" alt="L.Ortiz Design Logo" class="h-10 w-auto"></a>
+<a class="flex items-center gap-2 text-headline-md font-headline-md font-bold tracking-tight text-primary dark:text-primary" href="code.html"><img src="../assets/Logo%20LOrtiz%20Desing%20trazo%20negro.png" alt="L.Ortiz Design Logo" class="h-10 w-auto"></a>
 <div class="hidden lg:flex gap-6 items-center">
 <a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-sm text-label-sm" href="../marketplace_digital_assets/code.html">Marketplace</a>
 <a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-sm text-label-sm" href="../creative_services/code.html">Servicios Creativos</a>
@@ -137,9 +137,6 @@
 </div>
 <button class="material-symbols-outlined text-on-surface-variant p-2 hover:bg-primary/10 rounded-full transition-all active:scale-90">shopping_cart</button>
 <button class="material-symbols-outlined text-on-surface-variant p-2 hover:bg-primary/10 rounded-full transition-all active:scale-90">notifications</button>
-<div class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant/50 cursor-pointer hover:scale-105 transition-transform">
-<img class="w-full h-full object-cover" data-alt="A professional close-up portrait of a creative designer in a modern studio environment. The lighting is soft and directional, highlighting the contours of the face against a dark, moody background with subtle blue rim lighting. The style is high-end corporate photography with a narrow depth of field, embodying the L.Ortiz brand aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFVbNC0P8duQ1gPhPtzkeuoIEEbUUifjoFCDjDdteXSzcyzGPZiDbNe68E_Kw_QMiZFfMNEW0TG3QjLIpkR3V1OvtKTCvO8KH-G-y59pXNSZIOgtYUbyBi62-oH0HR6vsAXWZX9yFNPtPSrh6HYExKiiTMiCUle4OnmOZYeaF9QPQ7H3eeMKD2W0r7Z_vpP2IM9Uo13jmC_C94O3cYHoNJkIB8PzYoJ059RhHKCTwVEvB1HeZewgVXk6Nv-OF_LdHiUVPGqwmHfkc0"/>
-</div>
 </div>
 </nav>
 </header>
@@ -188,9 +185,9 @@
 <!-- Project 1 -->
 <div class="group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2">
 <div class="aspect-[4/3] relative overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Manta publicitaria de Hugo Ricardo fabricada por L.Ortiz Design." src="../assets/Manta%20Hugo%20Ricardo.jpg"/>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 cursor-pointer" onclick="openLightbox(this.src, 'Manta Publicitaria - Hugo Ricardo')" data-alt="Manta publicitaria de Hugo Ricardo fabricada por L.Ortiz Design." src="../assets/Manta%20Hugo%20Ricardo.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-<button class="bg-primary text-on-primary-fixed w-12 h-12 rounded-full flex items-center justify-center"><span class="material-symbols-outlined">visibility</span></button>
+<button onclick="openLightbox('../assets/Manta Hugo Ricardo.jpg', 'Manta Publicitaria - Hugo Ricardo')" class="bg-primary text-on-primary-fixed w-12 h-12 rounded-full flex items-center justify-center"><span class="material-symbols-outlined">visibility</span></button>
 </div>
 </div>
 <div class="p-6">
@@ -201,9 +198,9 @@
 <!-- Project 2 -->
 <div class="group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2">
 <div class="aspect-[4/3] relative overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Manta de Julito Comedor fabricada por L.Ortiz Design." src="../assets/Manta%20Julito%20Comedor.jpg"/>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 cursor-pointer" onclick="openLightbox(this.src, 'Manta Comercial - Julito Comedor')" data-alt="Manta de Julito Comedor fabricada por L.Ortiz Design." src="../assets/Manta%20Julito%20Comedor.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-<button class="bg-primary text-on-primary-fixed w-12 h-12 rounded-full flex items-center justify-center"><span class="material-symbols-outlined">visibility</span></button>
+<button onclick="openLightbox('../assets/Manta Julito Comedor.jpg', 'Manta Comercial - Julito Comedor')" class="bg-primary text-on-primary-fixed w-12 h-12 rounded-full flex items-center justify-center"><span class="material-symbols-outlined">visibility</span></button>
 </div>
 </div>
 <div class="p-6">
@@ -214,9 +211,9 @@
 <!-- Project 3 -->
 <div class="group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2">
 <div class="aspect-[4/3] relative overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Manta publicitaria personalizada L.Ortiz." src="../assets/para%20mantas%20lortiz.jpg"/>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 cursor-pointer" onclick="openLightbox(this.src, 'Manta Personalizada - L.Ortiz')" data-alt="Manta publicitaria personalizada L.Ortiz." src="../assets/para%20mantas%20lortiz.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-<button class="bg-primary text-on-primary-fixed w-12 h-12 rounded-full flex items-center justify-center"><span class="material-symbols-outlined">visibility</span></button>
+<button onclick="openLightbox('../assets/para mantas lortiz.jpg', 'Manta Personalizada - L.Ortiz')" class="bg-primary text-on-primary-fixed w-12 h-12 rounded-full flex items-center justify-center"><span class="material-symbols-outlined">visibility</span></button>
 </div>
 </div>
 <div class="p-6">
@@ -393,18 +390,25 @@
 </section>
 <!-- CTA Section -->
 <section class="py-32 px-gutter">
-<div class="max-w-container-max mx-auto rounded-[64px] bg-primary p-16 md:p-24 text-center relative overflow-hidden">
+<div class="max-w-container-max mx-auto rounded-[64px] bg-primary p-12 md:p-20 relative overflow-hidden">
 <div class="absolute inset-0 opacity-10">
 
 </div>
-<div class="relative z-10">
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-8 text-center lg:text-left">
 <h2 class="text-display-lg-mobile md:text-display-lg font-display-lg text-on-primary mb-8">¿Listo para innovar tu marca?</h2>
-<p class="text-on-primary/80 text-body-lg font-body-lg max-w-xl mx-auto mb-12">
+<p class="text-on-primary/80 text-body-lg font-body-lg max-w-xl mx-auto lg:mx-0 mb-12">
                         Únete a más de 5,000 creadores y empresas que construyen el futuro del diseño con L.Ortiz.
                     </p>
-<div class="flex flex-wrap justify-center gap-6">
-<button class="px-12 py-5 bg-surface text-on-surface rounded-2xl font-headline-md text-headline-md hover:shadow-xl transition-all active:scale-95">Iniciar Proyecto</button>
-<button class="px-12 py-5 border-2 border-surface text-surface rounded-2xl font-headline-md text-headline-md hover:bg-surface/10 transition-all active:scale-95">Explorar Recursos</button>
+<div class="flex flex-wrap justify-center lg:justify-start gap-6">
+<a href="../creative_services/code.html" class="px-12 py-5 bg-surface text-on-surface rounded-2xl font-headline-md text-headline-md hover:shadow-xl transition-all active:scale-95 text-center block">Iniciar Proyecto</a>
+<a href="../marketplace_digital_assets/code.html" class="px-12 py-5 border-2 border-surface text-surface rounded-2xl font-headline-md text-headline-md hover:bg-surface/10 transition-all active:scale-95 text-center block">Explorar Recursos</a>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col items-center gap-4 bg-surface-container-lowest/20 backdrop-blur-md p-8 rounded-[40px] border border-surface/20 text-center shadow-inner">
+<p class="text-headline-md font-headline-md font-bold text-on-primary">WhatsApp Celular</p>
+<img src="../assets/QR%20Cel%20LOrtiz.png" alt="QR Contacto WhatsApp" class="w-40 h-40 rounded-2xl border border-surface/30 bg-white p-2 shadow-lg hover:scale-105 transition-transform cursor-pointer" onclick="openLightbox(this.src, 'QR Contacto WhatsApp')">
+<p class="text-[12px] text-on-primary/80 font-medium">Escanea para contactarnos directo</p>
 </div>
 </div>
 </div>
@@ -414,7 +418,7 @@
 <footer class="w-full py-16 px-gutter mt-auto bg-surface-container-highest dark:bg-surface-container-highest border-t border-outline-variant flat no shadows">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto">
 <div class="md:col-span-1">
-<a class="mb-6 block" href="code.html"><img src="../assets/Logo%20LOrtiz%20Desing%20trazo%20blanco.png" alt="L.Ortiz Design Logo" class="h-10 w-auto"></a>
+<a class="mb-6 block" href="code.html"><img src="../assets/Logo%20LOrtiz%20Desing%20trazo%20negro.png" alt="L.Ortiz Design Logo" class="h-10 w-auto"></a>
 <p class="text-on-surface-variant text-body-md mb-8">Explora. Crea. Innova. Soluciones creativas premium para el mundo moderno.</p>
 <div class="flex gap-4">
 <a class="w-10 h-10 rounded-full bg-surface flex items-center justify-center hover:text-primary transition-colors border border-outline-variant/30" href="#"><span class="material-symbols-outlined text-[20px]">public</span></a>
@@ -452,7 +456,51 @@
 <p class="text-on-surface-variant text-label-sm font-label-sm">© 2026 L.Ortiz Design. Explora. Crea. Innova.</p>
 </div>
 </footer>
+<!-- Lightbox Modal -->
+<div id="lightbox-modal" class="fixed inset-0 bg-black/95 z-[999] hidden items-center justify-center p-4 backdrop-blur-md opacity-0 transition-opacity duration-300">
+    <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white hover:text-primary transition-colors focus:outline-none">
+        <span class="material-symbols-outlined text-[36px]">close</span>
+    </button>
+    <div class="relative max-w-full max-h-[85vh] flex flex-col items-center">
+        <img id="lightbox-img" src="" alt="Vista Previa" class="max-w-full max-h-[80vh] rounded-2xl object-contain shadow-2xl scale-95 transition-transform duration-300 border border-outline-variant/30">
+        <p id="lightbox-caption" class="text-white text-body-lg font-headline-md mt-4 text-center tracking-wide"></p>
+    </div>
+</div>
+
 <script>
+        // Lightbox controller
+        function openLightbox(src, caption) {
+            const modal = document.getElementById('lightbox-modal');
+            const img = document.getElementById('lightbox-img');
+            const cap = document.getElementById('lightbox-caption');
+            img.src = src;
+            cap.innerText = caption || '';
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                img.classList.remove('scale-95');
+                img.classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightbox-modal');
+            const img = document.getElementById('lightbox-img');
+            modal.classList.add('opacity-0');
+            img.classList.remove('scale-100');
+            img.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        // Close lightbox on Esc key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
         // Micro-interactions and effects
         document.addEventListener('DOMContentLoaded', () => {
             // Navbar scroll effect
