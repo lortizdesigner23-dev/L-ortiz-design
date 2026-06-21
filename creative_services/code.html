@@ -780,7 +780,7 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="flex flex-col gap-2">
                             <label class="text-[12px] text-on-surface-variant uppercase font-bold tracking-wider">Tipo de Material</label>
-                            <select class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
+                            <select id="spec-impresion-material" class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
                                 <option>Papel Opalina Premium (300g)</option>
                                 <option>Papel Couché Brillante (350g)</option>
                                 <option>Papel Mate Reciclado (280g)</option>
@@ -789,7 +789,7 @@
                         </div>
                         <div class="flex flex-col gap-2">
                             <label class="text-[12px] text-on-surface-variant uppercase font-bold tracking-wider">Acabado Especial</label>
-                            <select class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
+                            <select id="spec-impresion-acabado" class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
                                 <option>Plastificado Mate</option>
                                 <option>Plastificado Brillante</option>
                                 <option>Barniz Registro UVI</option>
@@ -798,7 +798,7 @@
                         </div>
                         <div class="flex flex-col gap-2 sm:col-span-2">
                             <label class="text-[12px] text-on-surface-variant uppercase font-bold tracking-wider">Cantidad Aproximada</label>
-                            <input type="number" min="50" placeholder="Ej: 250" class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
+                            <input type="number" id="spec-impresion-cantidad" min="50" placeholder="Ej: 250" class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
                         </div>
                     </div>
                 `;
@@ -807,7 +807,7 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="flex flex-col gap-2">
                             <label class="text-[12px] text-on-surface-variant uppercase font-bold tracking-wider">Tipo de Vinilo</label>
-                            <select class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
+                            <select id="spec-vinilo-tipo" class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
                                 <option>Vinilo Esmerilado (Vidrios)</option>
                                 <option>Vinilo de Corte Color Plano</option>
                                 <option>Vinilo Impreso con Laminado Mate</option>
@@ -816,18 +816,18 @@
                         </div>
                         <div class="flex flex-col gap-2">
                             <label class="text-[12px] text-on-surface-variant uppercase font-bold tracking-wider">¿Requiere Instalación?</label>
-                            <select class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
+                            <select id="spec-vinilo-instalacion" class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
                                 <option>Sí, requiere servicio de montaje</option>
                                 <option>No, solo impresión y entrega</option>
                             </select>
                         </div>
                         <div class="flex flex-col gap-2">
                             <label class="text-[12px] text-on-surface-variant uppercase font-bold tracking-wider">Dimensiones: Ancho (metros)</label>
-                            <input type="text" placeholder="Ej: 2.4" class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
+                            <input type="text" id="spec-vinilo-ancho" placeholder="Ej: 2.4" class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
                         </div>
                         <div class="flex flex-col gap-2">
                             <label class="text-[12px] text-on-surface-variant uppercase font-bold tracking-wider">Dimensiones: Alto (metros)</label>
-                            <input type="text" placeholder="Ej: 1.8" class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
+                            <input type="text" id="spec-vinilo-alto" placeholder="Ej: 1.8" class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
                         </div>
                     </div>
                 `;
@@ -836,7 +836,7 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="flex flex-col gap-2">
                             <label class="text-[12px] text-on-surface-variant uppercase font-bold tracking-wider">Material Principal</label>
-                            <select class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
+                            <select id="spec-letreros-material" class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
                                 <option>Acrílico moldeado 3D</option>
                                 <option>Acero Inoxidable</option>
                                 <option>Madera Rústica Tratada</option>
@@ -845,7 +845,7 @@
                         </div>
                         <div class="flex flex-col gap-2">
                             <label class="text-[12px] text-on-surface-variant uppercase font-bold tracking-wider">Iluminación</label>
-                            <select class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
+                            <select id="spec-letreros-iluminacion" class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
                                 <option>Sí, retroiluminación LED Neon</option>
                                 <option>Sí, iluminación interior de caja</option>
                                 <option>No, letrero plano o sin luz</option>
@@ -853,7 +853,7 @@
                         </div>
                         <div class="flex flex-col gap-2 sm:col-span-2">
                             <label class="text-[12px] text-on-surface-variant uppercase font-bold tracking-wider">Lugar de Colocación</label>
-                            <select class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
+                            <select id="spec-letreros-colocacion" class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
                                 <option>Exterior (Resistente a intemperie)</option>
                                 <option>Interior (Lobby, pasillo, oficina)</option>
                             </select>
@@ -865,7 +865,7 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="flex flex-col gap-2">
                             <label class="text-[12px] text-on-surface-variant uppercase font-bold tracking-wider">Tipo de Artículo</label>
-                            <select class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
+                            <select id="spec-sublimacion-articulo" class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
                                 <option>Camisetas deportivas transpirables</option>
                                 <option>Gorras estructuradas premium</option>
                                 <option>Tazas cerámicas personalizadas</option>
@@ -874,11 +874,11 @@
                         </div>
                         <div class="flex flex-col gap-2">
                             <label class="text-[12px] text-on-surface-variant uppercase font-bold tracking-wider">Cantidad de Piezas</label>
-                            <input type="number" min="10" placeholder="Mínimo 10 piezas" class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
+                            <input type="number" id="spec-sublimacion-cantidad" min="10" placeholder="Mínimo 10 piezas" class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
                         </div>
                         <div class="flex flex-col gap-2 sm:col-span-2">
                             <label class="text-[12px] text-on-surface-variant uppercase font-bold tracking-wider">Especificar Tallas / Colores (si aplica)</label>
-                            <input type="text" placeholder="Ej: 5 Talla M, 10 Talla L" class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
+                            <input type="text" id="spec-sublimacion-detalles" placeholder="Ej: 5 Talla M, 10 Talla L" class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
                         </div>
                     </div>
                 `;
@@ -887,7 +887,7 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="flex flex-col gap-2">
                             <label class="text-[12px] text-on-surface-variant uppercase font-bold tracking-wider">Alcance del Proyecto</label>
-                            <select class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
+                            <select id="spec-design-alcance" class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
                                 <option>Manual e Identidad Corporativa Completa</option>
                                 <option>Diseño de Logotipo y Papelería básica</option>
                                 <option>Diseño Web / Interfaz UI en Figma</option>
@@ -896,7 +896,7 @@
                         </div>
                         <div class="flex flex-col gap-2">
                             <label class="text-[12px] text-on-surface-variant uppercase font-bold tracking-wider">Formato de Entrega Requerido</label>
-                            <select class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
+                            <select id="spec-design-formato" class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
                                 <option>Vectores editables (.AI, .SVG, .PDF)</option>
                                 <option>Prototipo interactivo en Figma</option>
                                 <option>Imágenes estáticas (.PNG, .JPG)</option>
@@ -909,7 +909,7 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="flex flex-col gap-2">
                             <label class="text-[12px] text-on-surface-variant uppercase font-bold tracking-wider">Propósito del Equipo</label>
-                            <select class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
+                            <select id="spec-hardware-proposito" class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
                                 <option>Render 3D y CAD de arquitectura</option>
                                 <option>Edición de Video 4K y Colorimetría</option>
                                 <option>Diseño Vectorial e Ilustración pesada</option>
@@ -918,7 +918,7 @@
                         </div>
                         <div class="flex flex-col gap-2">
                             <label class="text-[12px] text-on-surface-variant uppercase font-bold tracking-wider">Sistema Operativo</label>
-                            <select class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
+                            <select id="spec-hardware-so" class="bg-background border border-outline-variant/30 rounded-xl px-4 py-2.5 text-body-md text-on-surface focus:ring-primary focus:border-primary">
                                 <option>Windows 11 Pro Preconfigurado</option>
                                 <option>macOS Workstation Integrado</option>
                                 <option>Linux Ubuntu LTS</option>
@@ -960,11 +960,71 @@
             // Form validation
             const name = document.getElementById('client-name').value.trim();
             const email = document.getElementById('client-email').value.trim();
+            const phone = document.getElementById('client-phone').value.trim() || 'No provisto';
+            const company = document.getElementById('client-company').value.trim() || 'No provista';
+            const comments = document.getElementById('client-comments').value.trim() || 'Ninguno';
             
             if (!name || !email) {
                 err3.classList.remove('hidden');
                 return;
             }
+
+            // WhatsApp Destination Phone Number
+            // Reemplaza esto con tu número de WhatsApp real (ej: 502XXXXXXXX para Guatemala)
+            const WHATSAPP_PHONE = '50230628285'; 
+
+            // Build WhatsApp Message
+            let msg = `*Nueva Solicitud de Cotización - L.Ortiz Design*\n\n`;
+            msg += `*Datos del Cliente:*\n`;
+            msg += `• Nombre: ${name}\n`;
+            msg += `• Email: ${email}\n`;
+            msg += `• Teléfono: ${phone}\n`;
+            msg += `• Empresa: ${company}\n\n`;
+            
+            msg += `*Servicios y Especificaciones:*\n`;
+            
+            const selectedKeys = Object.keys(state.selectedServices).filter(k => state.selectedServices[k]);
+            selectedKeys.forEach(key => {
+                const data = state.metadata[key];
+                msg += `\n• *${data.name}*\n`;
+                if (key === 'impresion') {
+                    const material = document.getElementById('spec-impresion-material')?.value || '';
+                    const acabado = document.getElementById('spec-impresion-acabado')?.value || '';
+                    const cantidad = document.getElementById('spec-impresion-cantidad')?.value || 'No indicada';
+                    msg += `  - Material: ${material}\n  - Acabado: ${acabado}\n  - Cantidad: ${cantidad}\n`;
+                } else if (key === 'vinilo') {
+                    const tipo = document.getElementById('spec-vinilo-tipo')?.value || '';
+                    const inst = document.getElementById('spec-vinilo-instalacion')?.value || '';
+                    const ancho = document.getElementById('spec-vinilo-ancho')?.value || 'No indicado';
+                    const alto = document.getElementById('spec-vinilo-alto')?.value || 'No indicado';
+                    msg += `  - Tipo: ${tipo}\n  - Instalación: ${inst}\n  - Ancho: ${ancho}m\n  - Alto: ${alto}m\n`;
+                } else if (key === 'letreros') {
+                    const material = document.getElementById('spec-letreros-material')?.value || '';
+                    const iluminacion = document.getElementById('spec-letreros-iluminacion')?.value || '';
+                    const colocacion = document.getElementById('spec-letreros-colocacion')?.value || '';
+                    msg += `  - Material: ${material}\n  - Iluminación: ${iluminacion}\n  - Colocación: ${colocacion}\n`;
+                } else if (key === 'sublimacion') {
+                    const articulo = document.getElementById('spec-sublimacion-articulo')?.value || '';
+                    const cantidad = document.getElementById('spec-sublimacion-cantidad')?.value || 'No indicada';
+                    const detalles = document.getElementById('spec-sublimacion-detalles')?.value || 'Ninguno';
+                    msg += `  - Artículo: ${articulo}\n  - Cantidad: ${cantidad}\n  - Detalles: ${detalles}\n`;
+                } else if (key === 'design') {
+                    const alcance = document.getElementById('spec-design-alcance')?.value || '';
+                    const formato = document.getElementById('spec-design-formato')?.value || '';
+                    msg += `  - Alcance: ${alcance}\n  - Formato: ${formato}\n`;
+                } else if (key === 'hardware') {
+                    const propos = document.getElementById('spec-hardware-proposito')?.value || '';
+                    const so = document.getElementById('spec-hardware-so')?.value || '';
+                    msg += `  - Propósito: ${propos}\n  - S.O.: ${so}\n`;
+                }
+            });
+            
+            msg += `\n*Comentarios Especiales:*\n"${comments}"\n`;
+
+            // Open WhatsApp Web or Mobile App
+            const encodedText = encodeURIComponent(msg);
+            const whatsappURL = `https://api.whatsapp.com/send?phone=${WHATSAPP_PHONE}&text=${encodedText}`;
+            window.open(whatsappURL, '_blank');
 
             // Trigger success modal
             showSuccessModal(name, email);
