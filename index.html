@@ -303,10 +303,10 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Project 1 -->
                     <div class="group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2 relative shadow-lg">
-                        <div class="aspect-[4/3] relative overflow-hidden">
-                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 cursor-pointer" onclick="openLightbox(this.src, 'Manta Publicitaria - Hugo Ricardo')" alt="Manta publicitaria de Hugo Ricardo fabricada por L.Ortiz Design." src="assets/Manta%20Hugo%20Ricardo.jpg"/>
+                        <div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="openLightbox('assets/Manta Hugo Ricardo.jpg', 'Manta Publicitaria - Hugo Ricardo')">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none select-none" alt="Manta publicitaria de Hugo Ricardo fabricada por L.Ortiz Design." src="assets/Manta%20Hugo%20Ricardo.jpg" draggable="false"/>
                             <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                                <button onclick="openLightbox('assets/Manta Hugo Ricardo.jpg', 'Manta Publicitaria - Hugo Ricardo')" class="bg-accent text-white w-12 h-12 rounded-xl flex items-center justify-center hover:scale-105 transition-transform"><span class="material-symbols-outlined">zoom_in</span></button>
+                                <span class="bg-accent text-white w-12 h-12 rounded-xl flex items-center justify-center hover:scale-105 transition-transform"><span class="material-symbols-outlined">zoom_in</span></span>
                             </div>
                         </div>
                         <div class="p-6">
@@ -317,10 +317,10 @@
 
                     <!-- Project 2 -->
                     <div class="group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2 relative shadow-lg">
-                        <div class="aspect-[4/3] relative overflow-hidden">
-                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 cursor-pointer" onclick="openLightbox(this.src, 'Manta Comercial - Julito Comedor')" alt="Manta de Julito Comedor fabricada por L.Ortiz Design." src="assets/Manta%20Julito%20Comedor.jpg"/>
+                        <div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="openLightbox('assets/Manta Julito Comedor.jpg', 'Manta Comercial - Julito Comedor')">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none select-none" alt="Manta de Julito Comedor fabricada por L.Ortiz Design." src="assets/Manta%20Julito%20Comedor.jpg" draggable="false"/>
                             <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                                <button onclick="openLightbox('assets/Manta Julito Comedor.jpg', 'Manta Comercial - Julito Comedor')" class="bg-accent text-white w-12 h-12 rounded-xl flex items-center justify-center hover:scale-105 transition-transform"><span class="material-symbols-outlined">zoom_in</span></button>
+                                <span class="bg-accent text-white w-12 h-12 rounded-xl flex items-center justify-center hover:scale-105 transition-transform"><span class="material-symbols-outlined">zoom_in</span></span>
                             </div>
                         </div>
                         <div class="p-6">
@@ -331,10 +331,10 @@
 
                     <!-- Project 3 -->
                     <div class="group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2 relative shadow-lg">
-                        <div class="aspect-[4/3] relative overflow-hidden">
-                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 cursor-pointer" onclick="openLightbox(this.src, 'Manta Corporativa Personalizada')" alt="Manta publicitaria personalizada L.Ortiz." src="assets/para%20mantas%20lortiz.jpg"/>
+                        <div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="openLightbox('assets/para mantas lortiz.jpg', 'Manta Corporativa Personalizada')">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none select-none" alt="Manta publicitaria personalizada L.Ortiz." src="assets/para%20mantas%20lortiz.jpg" draggable="false"/>
                             <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                                <button onclick="openLightbox('assets/para mantas lortiz.jpg', 'Manta Corporativa Personalizada')" class="bg-accent text-white w-12 h-12 rounded-xl flex items-center justify-center hover:scale-105 transition-transform"><span class="material-symbols-outlined">zoom_in</span></button>
+                                <span class="bg-accent text-white w-12 h-12 rounded-xl flex items-center justify-center hover:scale-105 transition-transform"><span class="material-symbols-outlined">zoom_in</span></span>
                             </div>
                         </div>
                         <div class="p-6">
@@ -447,13 +447,32 @@
         <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white hover:text-accent transition-colors focus:outline-none">
             <span class="material-symbols-outlined text-[36px]">close</span>
         </button>
-        <div class="relative max-w-full max-h-[85vh] flex flex-col items-center">
-            <img id="lightbox-img" src="" alt="Vista Previa" class="max-w-full max-h-[80vh] rounded-2xl object-contain shadow-2xl scale-95 transition-transform duration-300 border border-outline-variant/30">
+        <div class="relative max-w-full max-h-[85vh] flex flex-col items-center select-none">
+            <div class="relative">
+                <!-- Transparent overlay to prevent right-click and save -->
+                <div class="absolute inset-0 bg-transparent z-10" oncontextmenu="return false;"></div>
+                <img id="lightbox-img" src="" alt="Vista Previa" class="max-w-full max-h-[80vh] rounded-2xl object-contain shadow-2xl scale-95 transition-transform duration-300 border border-outline-variant/30 pointer-events-none" draggable="false">
+            </div>
             <p id="lightbox-caption" class="text-white text-body-lg font-headline-md mt-4 text-center tracking-wide"></p>
         </div>
     </div>
 
     <script>
+        // Global image protection (Disable right-click and drag)
+        document.addEventListener('contextmenu', (e) => {
+            if (e.target.tagName === 'IMG' || e.target.closest('#lightbox-modal')) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        document.addEventListener('dragstart', (e) => {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
+                return false;
+            }
+        });
+
         // Lightbox controller
         function openLightbox(src, caption) {
             const modal = document.getElementById('lightbox-modal');
