@@ -38,6 +38,21 @@
         ::-webkit-scrollbar-track { background: #0d0d0f; }
         ::-webkit-scrollbar-thumb { background: #343536; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #44474d; }
+
+        /* Portfolio Filter Animations */
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .animate-fade-in-scale {
+            animation: fadeInScale 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
     </style>
     <!-- Insert Tailwind Config -->
     <script id="tailwind-config">
@@ -300,9 +315,20 @@
                     </div>
                 </div>
 
+                <!-- Portfolio Filters -->
+                <div class="flex flex-wrap justify-center gap-3 mb-12 select-none">
+                    <button class="portfolio-filter-btn px-6 py-2.5 rounded-full font-bold text-label-sm font-label-sm transition-all bg-accent text-white border border-transparent active:scale-95" data-filter="all">Todos</button>
+                    <button class="portfolio-filter-btn px-6 py-2.5 rounded-full font-bold text-label-sm font-label-sm transition-all border border-outline-variant text-on-surface-variant hover:text-primary hover:border-primary bg-surface active:scale-95" data-filter="rotulos">Rótulos LED y Letras 3D</button>
+                    <button class="portfolio-filter-btn px-6 py-2.5 rounded-full font-bold text-label-sm font-label-sm transition-all border border-outline-variant text-on-surface-variant hover:text-primary hover:border-primary bg-surface active:scale-95" data-filter="mantas">Mantas y Banners</button>
+                    <button class="portfolio-filter-btn px-6 py-2.5 rounded-full font-bold text-label-sm font-label-sm transition-all border border-outline-variant text-on-surface-variant hover:text-primary hover:border-primary bg-surface active:scale-95" data-filter="sublimacion">Sublimación</button>
+                    <button class="portfolio-filter-btn px-6 py-2.5 rounded-full font-bold text-label-sm font-label-sm transition-all border border-outline-variant text-on-surface-variant hover:text-primary hover:border-primary bg-surface active:scale-95" data-filter="diseno">Diseño Gráfico</button>
+                    <button class="portfolio-filter-btn px-6 py-2.5 rounded-full font-bold text-label-sm font-label-sm transition-all border border-outline-variant text-on-surface-variant hover:text-primary hover:border-primary bg-surface active:scale-95" data-filter="tarjetas">Tarjetas de Presentación</button>
+                    <button class="portfolio-filter-btn px-6 py-2.5 rounded-full font-bold text-label-sm font-label-sm transition-all border border-outline-variant text-on-surface-variant hover:text-primary hover:border-primary bg-surface active:scale-95" data-filter="papeleria">Papelería Creativa</button>
+                </div>
+
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project 1 -->
-                    <div class="group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2 relative shadow-lg">
+                    <!-- Project 1 (Mantas y Banners) -->
+                    <div class="portfolio-item group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2 relative shadow-lg" data-category="mantas">
                         <div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="openLightbox('assets/Manta Hugo Ricardo.jpg', 'Manta Publicitaria - Hugo Ricardo')">
                             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none select-none" alt="Manta publicitaria de Hugo Ricardo fabricada por L.Ortiz Design." src="assets/Manta%20Hugo%20Ricardo.jpg" draggable="false"/>
                             <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
@@ -310,13 +336,13 @@
                             </div>
                         </div>
                         <div class="p-6">
-                            <h4 class="text-headline-md font-headline-md mb-2">Manta Publicitaria Hugo Ricardo</h4>
+                            <h4 class="text-headline-md font-headline-md mb-2 text-on-surface">Manta Publicitaria Hugo Ricardo</h4>
                             <p class="text-on-surface-variant text-label-sm font-label-sm">Impresión en Lona / Gran Formato</p>
                         </div>
                     </div>
 
-                    <!-- Project 2 -->
-                    <div class="group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2 relative shadow-lg">
+                    <!-- Project 2 (Mantas y Banners) -->
+                    <div class="portfolio-item group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2 relative shadow-lg" data-category="mantas">
                         <div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="openLightbox('assets/Manta Julito Comedor.jpg', 'Manta Comercial - Julito Comedor')">
                             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none select-none" alt="Manta de Julito Comedor fabricada por L.Ortiz Design." src="assets/Manta%20Julito%20Comedor.jpg" draggable="false"/>
                             <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
@@ -324,13 +350,13 @@
                             </div>
                         </div>
                         <div class="p-6">
-                            <h4 class="text-headline-md font-headline-md mb-2">Manta Comercial Julito Comedor</h4>
+                            <h4 class="text-headline-md font-headline-md mb-2 text-on-surface">Manta Comercial Julito Comedor</h4>
                             <p class="text-on-surface-variant text-label-sm font-label-sm">Publicidad Exterior / Rotulaciones</p>
                         </div>
                     </div>
 
-                    <!-- Project 3 -->
-                    <div class="group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2 relative shadow-lg">
+                    <!-- Project 3 (Mantas y Banners) -->
+                    <div class="portfolio-item group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2 relative shadow-lg" data-category="mantas">
                         <div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="openLightbox('assets/para mantas lortiz.jpg', 'Manta Corporativa Personalizada')">
                             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none select-none" alt="Manta publicitaria personalizada L.Ortiz." src="assets/para%20mantas%20lortiz.jpg" draggable="false"/>
                             <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
@@ -338,8 +364,78 @@
                             </div>
                         </div>
                         <div class="p-6">
-                            <h4 class="text-headline-md font-headline-md mb-2">Manta Corporativa Personalizada</h4>
+                            <h4 class="text-headline-md font-headline-md mb-2 text-on-surface">Manta Corporativa Personalizada</h4>
                             <p class="text-on-surface-variant text-label-sm font-label-sm">Diseño y Producción L.Ortiz</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 (Rótulos LED y Letras 3D) -->
+                    <div class="portfolio-item group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2 relative shadow-lg" data-category="rotulos">
+                        <div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="openLightbox('assets/led_sign_neon.png', 'Rótulo LED Neón Coffee')">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none select-none" alt="Rótulo LED Neon Coffee fabricado por L.Ortiz Design." src="assets/led_sign_neon.png" draggable="false"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                <span class="bg-accent text-white w-12 h-12 rounded-xl flex items-center justify-center hover:scale-105 transition-transform"><span class="material-symbols-outlined">zoom_in</span></span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-headline-md font-headline-md mb-2 text-on-surface">Rótulo LED Neón Coffee</h4>
+                            <p class="text-on-surface-variant text-label-sm font-label-sm">Iluminación LED y Letras Corpóreas</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 (Diseño Gráfico) -->
+                    <div class="portfolio-item group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2 relative shadow-lg" data-category="diseno">
+                        <div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="openLightbox('assets/branding_identity.png', 'Identidad Creativa - Creative Hub')">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none select-none" alt="Diseño de branding e identidad de marca por L.Ortiz Design." src="assets/branding_identity.png" draggable="false"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                <span class="bg-accent text-white w-12 h-12 rounded-xl flex items-center justify-center hover:scale-105 transition-transform"><span class="material-symbols-outlined">zoom_in</span></span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-headline-md font-headline-md mb-2 text-on-surface">Identidad Creativa Creative Hub</h4>
+                            <p class="text-on-surface-variant text-label-sm font-label-sm">Diseño Gráfico, Branding y Logotipos</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 (Sublimación) -->
+                    <div class="portfolio-item group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2 relative shadow-lg" data-category="sublimacion">
+                        <div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="openLightbox('assets/sublimation_mug_shirt.png', 'Taza y Playera Sublimadas')">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none select-none" alt="Sublimación personalizada de taza y playera por L.Ortiz Design." src="assets/sublimation_mug_shirt.png" draggable="false"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                <span class="bg-accent text-white w-12 h-12 rounded-xl flex items-center justify-center hover:scale-105 transition-transform"><span class="material-symbols-outlined">zoom_in</span></span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-headline-md font-headline-md mb-2 text-on-surface">Taza y Playera Sublimadas</h4>
+                            <p class="text-on-surface-variant text-label-sm font-label-sm">Sublimación y Merchandising Corporativo</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 7 (Tarjetas de Presentación) -->
+                    <div class="portfolio-item group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2 relative shadow-lg" data-category="tarjetas">
+                        <div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="openLightbox('assets/business_cards.png', 'Tarjetas de Presentación Premium')">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none select-none" alt="Tarjetas de presentación premium impresas por L.Ortiz Design." src="assets/business_cards.png" draggable="false"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                <span class="bg-accent text-white w-12 h-12 rounded-xl flex items-center justify-center hover:scale-105 transition-transform"><span class="material-symbols-outlined">zoom_in</span></span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-headline-md font-headline-md mb-2 text-on-surface">Tarjetas de Presentación Premium</h4>
+                            <p class="text-on-surface-variant text-label-sm font-label-sm">Impresión Offset y Relieve Foil</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 8 (Papelería Creativa) -->
+                    <div class="portfolio-item group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2 relative shadow-lg" data-category="papeleria">
+                        <div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="openLightbox('assets/creative_stationery.png', 'Papelería y Empaque Creativo')">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none select-none" alt="Papelería creativa y empaques por L.Ortiz Design." src="assets/creative_stationery.png" draggable="false"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                <span class="bg-accent text-white w-12 h-12 rounded-xl flex items-center justify-center hover:scale-105 transition-transform"><span class="material-symbols-outlined">zoom_in</span></span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-headline-md font-headline-md mb-2 text-on-surface">Papelería y Empaque Creativo</h4>
+                            <p class="text-on-surface-variant text-label-sm font-label-sm">Stickers, Etiquetas y Cajas de Regalo</p>
                         </div>
                     </div>
                 </div>
@@ -515,6 +611,36 @@
                 } else {
                     header.classList.remove('shadow-lg', 'bg-background/95');
                 }
+            });
+
+            // Portfolio filter controller
+            const filterBtns = document.querySelectorAll('.portfolio-filter-btn');
+            const items = document.querySelectorAll('.portfolio-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active button styles
+                    filterBtns.forEach(b => {
+                        b.classList.remove('bg-accent', 'text-white', 'border-transparent');
+                        b.classList.add('text-on-surface-variant', 'hover:text-primary', 'hover:border-primary', 'bg-surface', 'border-outline-variant');
+                    });
+                    btn.classList.add('bg-accent', 'text-white', 'border-transparent');
+                    btn.classList.remove('text-on-surface-variant', 'hover:text-primary', 'hover:border-primary', 'bg-surface', 'border-outline-variant');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    // Filter cards
+                    items.forEach(item => {
+                        const category = item.getAttribute('data-category');
+                        if (filterValue === 'all' || category === filterValue) {
+                            item.classList.remove('hidden');
+                            item.classList.add('animate-fade-in-scale');
+                        } else {
+                            item.classList.add('hidden');
+                            item.classList.remove('animate-fade-in-scale');
+                        }
+                    });
+                });
             });
         });
     </script>
