@@ -1108,6 +1108,26 @@
             // Populate success modal elements
             document.getElementById('success-service-name').innerText = serviceVal;
             
+            // Send data to FormSubmit via background AJAX fetch
+            fetch("https://formsubmit.co/ajax/lortizdesigner23@gmail.com", {
+                method: "POST",
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    "Nombre": nameVal,
+                    "Telefono": phoneVal,
+                    "Email": emailVal,
+                    "Servicio de Interes": serviceVal,
+                    "Mensaje/Detalles": messageVal,
+                    "_subject": `Nueva Cotización Web: ${serviceVal} - ${nameVal}`
+                })
+            })
+            .then(response => response.json())
+            .then(data => console.log("FormSubmit Success:", data))
+            .catch(error => console.error("FormSubmit Error:", error));
+
             // Create WhatsApp redirect URL
             const wpPhone = "50235354224";
             const rawText = `¡Hola L.Ortiz Design! Mi nombre es *${nameVal}*, mi celular es *${phoneVal}* y mi correo es *${emailVal}*.\n\nEstoy interesado en el servicio de: *${serviceVal}*.\n\nDetalles de mi proyecto:\n_${messageVal}_`;
