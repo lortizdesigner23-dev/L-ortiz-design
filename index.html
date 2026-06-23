@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>L.Ortiz Design | Diseñamos, imprimimos y transformamos ideas</title>
+    <title>L.Ortiz Design | Rótulos en Guatemala, Letras 3D e Impresión de Vinil</title>
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Diseño gráfico, rótulos LED, impresión en vinil, banners y sublimación profesional en Guatemala. Cotiza tu proyecto en minutos por WhatsApp."/>
+    <meta name="description" content="¿Buscas rótulos en Guatemala, letras 3D, letreros luminosos o impresión de vinil? L.Ortiz Design ofrece sublimación personalizada, publicidad exterior y diseño gráfico profesional en Guatemala. Cotiza en 2 minutos."/>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -52,6 +52,24 @@
         }
         .animate-fade-in-scale {
             animation: fadeInScale 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* Scroll entry animations */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-on-scroll.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* FAQ Accordion */
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
     </style>
     <!-- Insert Tailwind Config -->
@@ -155,11 +173,14 @@
                 <a class="flex items-center gap-2" href="#inicio">
                     <img src="assets/Logo%20LOrtiz%20Desing%20trazo%20negro.png" alt="L.Ortiz Design Logo" class="h-10 w-auto">
                 </a>
-                <div class="hidden md:flex gap-8 items-center">
+                <div class="hidden lg:flex gap-6 items-center">
                     <a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#inicio">Inicio</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#nosotros">Nosotros</a>
                     <a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#servicios">Servicios</a>
                     <a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#portafolio">Portafolio</a>
-                    <a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#confianza">Nosotros</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#galeria">Galería</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#faq">FAQ</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#contacto">Contacto</a>
                 </div>
             </div>
             <div>
@@ -194,6 +215,102 @@
                     <a href="#servicios" class="px-12 py-5 bg-surface-container-high/60 backdrop-blur border border-outline-variant/30 text-on-surface rounded-2xl font-headline-md text-headline-md hover:bg-surface-container-highest transition-all flex items-center justify-center">
                         Ver Servicios
                     </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ¿Quiénes Somos? & Estadísticas Section -->
+        <section id="nosotros" class="py-28 bg-surface-container-low border-b border-outline-variant/10 reveal-on-scroll">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                    <!-- Column 1: Quienes Somos Text -->
+                    <div class="lg:col-span-7 flex flex-col justify-center">
+                        <span class="text-accent font-bold text-label-sm font-label-sm uppercase tracking-widest block mb-3">¿Quiénes Somos?</span>
+                        <h2 class="text-display-lg-mobile md:text-display-lg font-display-lg mb-6 leading-tight">
+                            Transformamos ideas en <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">publicidad que vende</span>.
+                        </h2>
+                        <p class="text-on-surface-variant text-body-lg mb-8 leading-relaxed">
+                            L.Ortiz Design es una empresa dedicada a la impresión, rotulación, diseño y soluciones publicitarias en Guatemala. Ayudamos a negocios, emprendedores e instituciones a destacar en el mercado mediante creatividad, calidad superior y atención 100% personalizada.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#contacto" class="px-8 py-4 accent-gradient-btn text-white rounded-2xl font-bold font-label-sm text-label-sm flex items-center gap-2 hover:scale-105 transition-all">
+                                Solicita tu diseño hoy <span class="material-symbols-outlined text-[18px]">brush</span>
+                            </a>
+                            <a href="https://api.whatsapp.com/send?phone=50235354224&text=%C2%A1Hola%20L.Ortiz%20Design%21%20Me%20gustar%C3%ADa%20cotizar%20un%20proyecto." target="_blank" class="px-8 py-4 bg-surface border border-outline-variant/40 text-primary hover:bg-primary hover:text-on-primary rounded-2xl font-bold font-label-sm text-label-sm flex items-center gap-2 transition-all hover:scale-105">
+                                <span class="material-symbols-outlined text-[18px]">chat</span> Cotizar por WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Column 2: Value Cards -->
+                    <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Value 1 -->
+                        <div class="p-6 rounded-3xl bg-surface/50 border border-outline-variant/10 hover:border-accent/30 transition-all duration-300 group shadow-md backdrop-blur-sm">
+                            <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent transition-colors">
+                                <span class="material-symbols-outlined text-accent group-hover:text-white text-[24px]">palette</span>
+                            </div>
+                            <h4 class="font-bold text-on-surface mb-2 font-headline-md text-body-lg">Creatividad</h4>
+                            <p class="text-on-surface-variant text-label-sm leading-relaxed">Diseños únicos e innovadores adaptados a tu marca.</p>
+                        </div>
+                        
+                        <!-- Value 2 -->
+                        <div class="p-6 rounded-3xl bg-surface/50 border border-outline-variant/10 hover:border-accent/30 transition-all duration-300 group shadow-md backdrop-blur-sm">
+                            <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent transition-colors">
+                                <span class="material-symbols-outlined text-accent group-hover:text-white text-[24px]">workspace_premium</span>
+                            </div>
+                            <h4 class="font-bold text-on-surface mb-2 font-headline-md text-body-lg">Calidad</h4>
+                            <p class="text-on-surface-variant text-label-sm leading-relaxed">Materiales de alta durabilidad e impresión HD.</p>
+                        </div>
+
+                        <!-- Value 3 -->
+                        <div class="p-6 rounded-3xl bg-surface/50 border border-outline-variant/10 hover:border-accent/30 transition-all duration-300 group shadow-md backdrop-blur-sm">
+                            <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent transition-colors">
+                                <span class="material-symbols-outlined text-accent group-hover:text-white text-[24px]">support_agent</span>
+                            </div>
+                            <h4 class="font-bold text-on-surface mb-2 font-headline-md text-body-lg">Atención</h4>
+                            <p class="text-on-surface-variant text-label-sm leading-relaxed">Asesoría directa y personalizada de productores.</p>
+                        </div>
+
+                        <!-- Value 4 -->
+                        <div class="p-6 rounded-3xl bg-surface/50 border border-outline-variant/10 hover:border-accent/30 transition-all duration-300 group shadow-md backdrop-blur-sm">
+                            <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent transition-colors">
+                                <span class="material-symbols-outlined text-accent group-hover:text-white text-[24px]">lightbulb</span>
+                            </div>
+                            <h4 class="font-bold text-on-surface mb-2 font-headline-md text-body-lg">Innovación</h4>
+                            <p class="text-on-surface-variant text-label-sm leading-relaxed">Letreros luminosos y acabados de última tendencia.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Estadísticas de Confianza Block -->
+                <div class="mt-24 border-t border-outline-variant/10 pt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="text-center p-4 rounded-2xl bg-surface-container/30 border border-outline-variant/5">
+                        <p class="text-4xl md:text-5xl font-extrabold text-accent font-display-lg mb-2">
+                            +<span class="stat-counter" data-target="500">0</span>
+                        </p>
+                        <p class="text-on-surface-variant text-label-sm font-label-sm uppercase tracking-wide">Proyectos Realizados</p>
+                    </div>
+                    
+                    <div class="text-center p-4 rounded-2xl bg-surface-container/30 border border-outline-variant/5">
+                        <p class="text-4xl md:text-5xl font-extrabold text-accent font-display-lg mb-2">
+                            +<span class="stat-counter" data-target="300">0</span>
+                        </p>
+                        <p class="text-on-surface-variant text-label-sm font-label-sm uppercase tracking-wide">Clientes Satisfechos</p>
+                    </div>
+
+                    <div class="text-center p-4 rounded-2xl bg-surface-container/30 border border-outline-variant/5">
+                        <p class="text-4xl md:text-5xl font-extrabold text-accent font-display-lg mb-2">
+                            +<span class="stat-counter" data-target="10">0</span>
+                        </p>
+                        <p class="text-on-surface-variant text-label-sm font-label-sm uppercase tracking-wide">Años de Experiencia</p>
+                    </div>
+
+                    <div class="text-center p-4 rounded-2xl bg-surface-container/30 border border-outline-variant/5">
+                        <p class="text-4xl md:text-5xl font-extrabold text-accent font-display-lg mb-2">
+                            <span class="stat-counter" data-target="100">0</span>%
+                        </p>
+                        <p class="text-on-surface-variant text-label-sm font-label-sm uppercase tracking-wide">Atención Personalizada</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -442,6 +559,212 @@
             </div>
         </section>
 
+        <!-- Galería de Proyectos Reales Section -->
+        <section id="galeria" class="py-28 bg-surface-container-lowest border-b border-outline-variant/10 reveal-on-scroll">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="text-center mb-16 max-w-2xl mx-auto">
+                    <span class="text-accent font-bold text-label-sm font-label-sm uppercase tracking-widest block mb-3">Trabajos en Campo</span>
+                    <h2 class="text-display-lg-mobile font-display-lg mb-4 text-on-surface">Galería de Proyectos Reales</h2>
+                    <p class="text-on-surface-variant text-body-md">Fotografías reales de instalaciones y productos finalizados para nuestros clientes en todo el país.</p>
+                </div>
+
+                <!-- Gallery Filters -->
+                <div class="flex flex-wrap justify-center gap-3 mb-12 select-none">
+                    <button class="gallery-filter-btn px-6 py-2.5 rounded-full font-bold text-label-sm font-label-sm transition-all bg-accent text-white border border-transparent active:scale-95" data-filter="all">Todos</button>
+                    <button class="gallery-filter-btn px-6 py-2.5 rounded-full font-bold text-label-sm font-label-sm transition-all border border-outline-variant text-on-surface-variant hover:text-primary hover:border-primary bg-surface active:scale-95" data-filter="rotulos">Rótulos</button>
+                    <button class="gallery-filter-btn px-6 py-2.5 rounded-full font-bold text-label-sm font-label-sm transition-all border border-outline-variant text-on-surface-variant hover:text-primary hover:border-primary bg-surface active:scale-95" data-filter="viniles">Viniles</button>
+                    <button class="gallery-filter-btn px-6 py-2.5 rounded-full font-bold text-label-sm font-label-sm transition-all border border-outline-variant text-on-surface-variant hover:text-primary hover:border-primary bg-surface active:scale-95" data-filter="letras-3d">Letras 3D</button>
+                    <button class="gallery-filter-btn px-6 py-2.5 rounded-full font-bold text-label-sm font-label-sm transition-all border border-outline-variant text-on-surface-variant hover:text-primary hover:border-primary bg-surface active:scale-95" data-filter="sublimacion">Sublimación</button>
+                    <button class="gallery-filter-btn px-6 py-2.5 rounded-full font-bold text-label-sm font-label-sm transition-all border border-outline-variant text-on-surface-variant hover:text-primary hover:border-primary bg-surface active:scale-95" data-filter="instalaciones">Instalaciones</button>
+                    <button class="gallery-filter-btn px-6 py-2.5 rounded-full font-bold text-label-sm font-label-sm transition-all border border-outline-variant text-on-surface-variant hover:text-primary hover:border-primary bg-surface active:scale-95" data-filter="antes-despues">Antes y Después</button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Gallery Item 1: Rótulos -->
+                    <div class="gallery-item group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2 relative shadow-lg" data-category="rotulos">
+                        <div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="openLightbox('assets/led_sign_neon.png', 'Rótulo LED Neón Coffee')">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none select-none" alt="Rótulos en Guatemala - Letrero LED luminoso fabricado por L.Ortiz Design" src="assets/led_sign_neon.png" draggable="false"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                <span class="bg-accent text-white w-12 h-12 rounded-xl flex items-center justify-center hover:scale-105 transition-transform"><span class="material-symbols-outlined">zoom_in</span></span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-headline-md font-headline-md mb-2 text-on-surface">Rótulo LED Luminoso</h4>
+                            <p class="text-on-surface-variant text-label-sm font-label-sm">Rótulos en Guatemala / Letreros Luminosos</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 2: Viniles -->
+                    <div class="gallery-item group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2 relative shadow-lg" data-category="viniles">
+                        <div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="openLightbox('assets/Manta Hugo Ricardo.jpg', 'Impresión de Vinil y Banners')">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none select-none" alt="Impresión de vinil en Guatemala - Vinil autoadhesivo impreso de alta definición" src="assets/Manta%20Hugo%20Ricardo.jpg" draggable="false"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                <span class="bg-accent text-white w-12 h-12 rounded-xl flex items-center justify-center hover:scale-105 transition-transform"><span class="material-symbols-outlined">zoom_in</span></span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-headline-md font-headline-md mb-2 text-on-surface">Impresión de Vinil Autoadhesivo</h4>
+                            <p class="text-on-surface-variant text-label-sm font-label-sm">Impresión de Vinil / Publicidad Exterior</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 3: Letras 3D -->
+                    <div class="gallery-item group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2 relative shadow-lg" data-category="letras-3d">
+                        <div class="aspect-[4/3] relative overflow-hidden cursor-pointer flex flex-col justify-center items-center bg-surface-container/40 p-8 border-b border-outline-variant/10">
+                            <span class="material-symbols-outlined text-[64px] text-accent/40 mb-4 group-hover:scale-110 transition-transform">photo_camera</span>
+                            <span class="px-3 py-1 rounded-full bg-accent/10 text-accent border border-accent/20 text-[11px] font-label-sm uppercase tracking-wider mb-2">Listo para Foto Real</span>
+                            <p class="text-[12px] text-on-surface-variant/70 text-center max-w-[200px]">Letras 3D Corpóreas instaladas recientemente.</p>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-headline-md font-headline-md mb-2 text-on-surface">Letras 3D Corpóreas</h4>
+                            <p class="text-on-surface-variant text-label-sm font-label-sm">Letras 3D / Acrílico y PVC</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 4: Sublimación -->
+                    <div class="gallery-item group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2 relative shadow-lg" data-category="sublimacion">
+                        <div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="openLightbox('assets/sublimation_mug_shirt.png', 'Sublimación de Artículos Promocionales')">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none select-none" alt="Sublimación personalizada en Guatemala - playeras y tazas impresas" src="assets/sublimation_mug_shirt.png" draggable="false"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                <span class="bg-accent text-white w-12 h-12 rounded-xl flex items-center justify-center hover:scale-105 transition-transform"><span class="material-symbols-outlined">zoom_in</span></span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-headline-md font-headline-md mb-2 text-on-surface">Sublimación de Promocionales</h4>
+                            <p class="text-on-surface-variant text-label-sm font-label-sm">Sublimación Personalizada / Playeras y Tazas</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 5: Instalaciones -->
+                    <div class="gallery-item group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2 relative shadow-lg" data-category="instalaciones">
+                        <div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="openLightbox('assets/para mantas lortiz.jpg', 'Instalación de Publicidad Exterior')">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none select-none" alt="Instalaciones publicitarias y montaje de mantas por L.Ortiz Design" src="assets/para%20mantas%20lortiz.jpg" draggable="false"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                <span class="bg-accent text-white w-12 h-12 rounded-xl flex items-center justify-center hover:scale-105 transition-transform"><span class="material-symbols-outlined">zoom_in</span></span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-headline-md font-headline-md mb-2 text-on-surface">Instalación en Altura</h4>
+                            <p class="text-on-surface-variant text-label-sm font-label-sm">Publicidad Exterior / Montaje Profesional</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 6: Antes y después -->
+                    <div class="gallery-item group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2 relative shadow-lg" data-category="antes-despues">
+                        <div class="aspect-[4/3] relative overflow-hidden cursor-pointer flex flex-col justify-center items-center bg-surface-container/40 p-8 border-b border-outline-variant/10">
+                            <div class="flex gap-4 mb-4">
+                                <span class="px-2 py-1 bg-surface-container-high rounded text-[11px] font-bold text-on-surface-variant">ANTERIOR</span>
+                                <span class="material-symbols-outlined text-accent text-[24px] self-center">arrow_forward</span>
+                                <span class="px-2 py-1 bg-accent rounded text-[11px] font-bold text-white">NUEVO</span>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-accent/10 text-accent border border-accent/20 text-[11px] font-label-sm uppercase tracking-wider mb-2">Listo para Comparación</span>
+                            <p class="text-[12px] text-on-surface-variant/70 text-center max-w-[200px]">Cambios drásticos de fachadas y locales.</p>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-headline-md font-headline-md mb-2 text-on-surface">Renovación de Fachada Comercial</h4>
+                            <p class="text-on-surface-variant text-label-sm font-label-sm">Antes y Después / Rotulación Exterior</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA integrado de la galería -->
+                <div class="mt-16 text-center">
+                    <p class="text-on-surface-variant text-body-md mb-4">¿Quieres ver tu propio negocio en esta lista?</p>
+                    <a href="#contacto" class="px-8 py-4 accent-gradient-btn text-white rounded-2xl font-bold font-label-sm text-label-sm inline-flex items-center gap-2">
+                        Cotiza en menos de 2 minutos <span class="material-symbols-outlined text-[18px]">bolt</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonios de Clientes Section -->
+        <section id="testimonios" class="py-28 bg-background border-b border-outline-variant/10 reveal-on-scroll">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="text-center mb-20 max-w-2xl mx-auto">
+                    <span class="text-accent font-bold text-label-sm font-label-sm uppercase tracking-widest block mb-3">Opiniones Reales</span>
+                    <h2 class="text-display-lg-mobile font-display-lg mb-4 text-on-surface">Testimonios de Clientes</h2>
+                    <p class="text-on-surface-variant text-body-lg">La satisfacción de quienes confían en L.Ortiz Design es nuestra mejor carta de presentación.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="p-8 rounded-3xl glass-card hover:border-accent/30 transition-all duration-300 flex flex-col justify-between group shadow-lg">
+                        <div>
+                            <div class="flex gap-1 text-amber-500 mb-6 group-hover:scale-105 transition-transform duration-300 origin-left">
+                                <span class="material-symbols-outlined filled text-[20px] text-accent">star</span>
+                                <span class="material-symbols-outlined filled text-[20px] text-accent">star</span>
+                                <span class="material-symbols-outlined filled text-[20px] text-accent">star</span>
+                                <span class="material-symbols-outlined filled text-[20px] text-accent">star</span>
+                                <span class="material-symbols-outlined filled text-[20px] text-accent">star</span>
+                            </div>
+                            <p class="text-on-surface text-body-md italic mb-8 leading-relaxed">
+                                "Excelente atención y resultados increíbles. Nos asesoraron en el tipo de material adecuado para nuestro letrero exterior."
+                            </p>
+                        </div>
+                        <div class="border-t border-outline-variant/10 pt-6 flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center font-bold text-accent font-label-sm">
+                                CS
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-on-surface text-label-sm">Cliente Satisfecho</h4>
+                                <p class="text-[12px] text-on-surface-variant">Rotulación Comercial</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="p-8 rounded-3xl glass-card hover:border-accent/30 transition-all duration-300 flex flex-col justify-between group shadow-lg">
+                        <div>
+                            <div class="flex gap-1 text-amber-500 mb-6 group-hover:scale-105 transition-transform duration-300 origin-left">
+                                <span class="material-symbols-outlined filled text-[20px] text-accent">star</span>
+                                <span class="material-symbols-outlined filled text-[20px] text-accent">star</span>
+                                <span class="material-symbols-outlined filled text-[20px] text-accent">star</span>
+                                <span class="material-symbols-outlined filled text-[20px] text-accent">star</span>
+                                <span class="material-symbols-outlined filled text-[20px] text-accent">star</span>
+                            </div>
+                            <p class="text-on-surface text-body-md italic mb-8 leading-relaxed">
+                                "La calidad de impresión superó nuestras expectativas. Los colores salieron sumamente vibrantes y el vinil es sumamente resistente."
+                            </p>
+                        </div>
+                        <div class="border-t border-outline-variant/10 pt-6 flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center font-bold text-accent font-label-sm">
+                                CS
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-on-surface text-label-sm">Cliente Satisfecho</h4>
+                                <p class="text-[12px] text-on-surface-variant">Impresión en Vinil</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="p-8 rounded-3xl glass-card hover:border-accent/30 transition-all duration-300 flex flex-col justify-between group shadow-lg">
+                        <div>
+                            <div class="flex gap-1 text-amber-500 mb-6 group-hover:scale-105 transition-transform duration-300 origin-left">
+                                <span class="material-symbols-outlined filled text-[20px] text-accent">star</span>
+                                <span class="material-symbols-outlined filled text-[20px] text-accent">star</span>
+                                <span class="material-symbols-outlined filled text-[20px] text-accent">star</span>
+                                <span class="material-symbols-outlined filled text-[20px] text-accent">star</span>
+                                <span class="material-symbols-outlined filled text-[20px] text-accent">star</span>
+                            </div>
+                            <p class="text-on-surface text-body-md italic mb-8 leading-relaxed">
+                                "Muy recomendados por su profesionalismo. Cumplieron con los tiempos de entrega pactados y la comunicación fue fluida por WhatsApp."
+                            </p>
+                        </div>
+                        <div class="border-t border-outline-variant/10 pt-6 flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center font-bold text-accent font-label-sm">
+                                CS
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-on-surface text-label-sm">Cliente Satisfecho</h4>
+                                <p class="text-[12px] text-on-surface-variant">Sublimación y Banners</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Trust Section -->
         <section id="confianza" class="py-28 bg-surface-container-lowest border-b border-outline-variant/10">
             <div class="max-w-container-max mx-auto px-gutter">
@@ -479,9 +802,218 @@
                                 <p class="font-bold text-on-surface text-label-sm">L.Ortiz Design</p>
                                 <p class="text-[12px] text-on-surface-variant">Asesoría de Branding &amp; Publicidad</p>
                             </div>
+        <!-- Preguntas Frecuentes Section -->
+        <section id="faq" class="py-28 bg-surface-container-low border-b border-outline-variant/10 reveal-on-scroll">
+            <div class="max-w-4xl mx-auto px-gutter">
+                <div class="text-center mb-16">
+                    <span class="text-accent font-bold text-label-sm font-label-sm uppercase tracking-widest block mb-3">Dudas Comunes</span>
+                    <h2 class="text-display-lg-mobile font-display-lg mb-4 text-on-surface">Preguntas Frecuentes</h2>
+                    <p class="text-on-surface-variant text-body-md">Resolvemos las consultas más habituales sobre nuestros servicios de diseño, rotulación e impresión en Guatemala.</p>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item rounded-2xl bg-surface border border-outline-variant/15 overflow-hidden transition-all duration-300">
+                        <button class="faq-header w-full p-6 text-left flex justify-between items-center text-on-surface hover:text-primary transition-colors focus:outline-none">
+                            <span class="font-bold text-body-lg">¿Cuánto tiempo tarda un proyecto?</span>
+                            <span class="material-symbols-outlined faq-icon transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div class="faq-content">
+                            <p class="p-6 pt-0 text-on-surface-variant text-body-md border-t border-outline-variant/10">
+                                El tiempo estimado varía según la complejidad y dimensiones del proyecto. Por lo general, la fase de diseño gráfico toma entre 2 y 3 días hábiles. La fabricación de rótulos LED, letras 3D o impresiones de gran formato demora de 3 a 5 días hábiles después de la aprobación del diseño.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item rounded-2xl bg-surface border border-outline-variant/15 overflow-hidden transition-all duration-300">
+                        <button class="faq-header w-full p-6 text-left flex justify-between items-center text-on-surface hover:text-primary transition-colors focus:outline-none">
+                            <span class="font-bold text-body-lg">¿Realizan diseños personalizados?</span>
+                            <span class="material-symbols-outlined faq-icon transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div class="faq-content">
+                            <p class="p-6 pt-0 text-on-surface-variant text-body-md border-t border-outline-variant/10">
+                                ¡Sí! Todo nuestro trabajo es personalizado. Nos adaptamos por completo a la identidad visual de tu marca o negocio. Si no cuentas con un logo o manual de identidad, nuestro equipo de diseño gráfico puede crearlo desde cero.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item rounded-2xl bg-surface border border-outline-variant/15 overflow-hidden transition-all duration-300">
+                        <button class="faq-header w-full p-6 text-left flex justify-between items-center text-on-surface hover:text-primary transition-colors focus:outline-none">
+                            <span class="font-bold text-body-lg">¿Aceptan transferencias?</span>
+                            <span class="material-symbols-outlined faq-icon transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div class="faq-content">
+                            <p class="p-6 pt-0 text-on-surface-variant text-body-md border-t border-outline-variant/10">
+                                Sí, aceptamos transferencias bancarias locales, depósitos monetarios y pagos en efectivo. Al iniciar el proyecto solicitamos un anticipo del 50% y el 50% restante al momento de la entrega o al finalizar la instalación.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item rounded-2xl bg-surface border border-outline-variant/15 overflow-hidden transition-all duration-300">
+                        <button class="faq-header w-full p-6 text-left flex justify-between items-center text-on-surface hover:text-primary transition-colors focus:outline-none">
+                            <span class="font-bold text-body-lg">¿Trabajan fuera del municipio?</span>
+                            <span class="material-symbols-outlined faq-icon transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div class="faq-content">
+                            <p class="p-6 pt-0 text-on-surface-variant text-body-md border-t border-outline-variant/10">
+                                Sí, trabajamos y realizamos envíos a todos los departamentos de Guatemala. Para proyectos de publicidad exterior o rotulación de fachadas, movilizamos a nuestro equipo de instalación a cualquier municipio bajo cotización previa de viáticos y transporte.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="faq-item rounded-2xl bg-surface border border-outline-variant/15 overflow-hidden transition-all duration-300">
+                        <button class="faq-header w-full p-6 text-left flex justify-between items-center text-on-surface hover:text-primary transition-colors focus:outline-none">
+                            <span class="font-bold text-body-lg">¿Realizan instalaciones?</span>
+                            <span class="material-symbols-outlined faq-icon transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div class="faq-content">
+                            <p class="p-6 pt-0 text-on-surface-variant text-body-md border-t border-outline-variant/10">
+                                Por supuesto. Contamos con personal capacitado y el equipo necesario para la instalación profesional y segura de rótulos LED, letras 3D corpóreas, cajas de luz, vinil sobre vidrios y mantas publicitarias de gran tamaño.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="faq-item rounded-2xl bg-surface border border-outline-variant/15 overflow-hidden transition-all duration-300">
+                        <button class="faq-header w-full p-6 text-left flex justify-between items-center text-on-surface hover:text-primary transition-colors focus:outline-none">
+                            <span class="font-bold text-body-lg">¿Puedo cotizar por WhatsApp?</span>
+                            <span class="material-symbols-outlined faq-icon transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div class="faq-content">
+                            <p class="p-6 pt-0 text-on-surface-variant text-body-md border-t border-outline-variant/10">
+                                ¡Sí, es nuestra vía preferida y más rápida! Al dar clic en cualquier botón de cotización de nuestra web, se abrirá un chat directo con un asesor listo para recibir las medidas, ideas y detalles de tu proyecto.
+                            </p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Formulario de Contacto Section -->
+        <section id="contacto" class="py-28 bg-background border-b border-outline-variant/10 reveal-on-scroll">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                    <!-- Column 1: Contact info -->
+                    <div class="lg:col-span-5">
+                        <span class="text-accent font-bold text-label-sm font-label-sm uppercase tracking-widest block mb-3">Contacto Directo</span>
+                        <h2 class="text-display-lg-mobile font-display-lg mb-6 text-on-surface">¿Tienes un proyecto en mente?</h2>
+                        <p class="text-on-surface-variant text-body-md mb-8 leading-relaxed">
+                            Completa el formulario indicando el servicio de tu interés y uno de nuestros diseñadores se pondrá en contacto contigo para detallar tu cotización.
+                        </p>
+                        <div class="flex flex-col gap-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
+                                    <span class="material-symbols-outlined text-accent text-[24px]">phone_iphone</span>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-on-surface-variant uppercase font-bold tracking-wider">Teléfono / WhatsApp</p>
+                                    <p class="text-on-surface font-bold font-headline-md">+502 3535 4224</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
+                                    <span class="material-symbols-outlined text-accent text-[24px]">mail</span>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-on-surface-variant uppercase font-bold tracking-wider">Correo Electrónico</p>
+                                    <p class="text-on-surface font-bold font-headline-md">info@lortizdesign.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
+                                    <span class="material-symbols-outlined text-accent text-[24px]">location_on</span>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-on-surface-variant uppercase font-bold tracking-wider">Ubicación</p>
+                                    <p class="text-on-surface font-bold font-headline-md">Guatemala</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Form -->
+                    <div class="lg:col-span-7 bg-surface-container/40 border border-outline-variant/15 p-8 md:p-10 rounded-3xl backdrop-blur-md shadow-2xl relative">
+                        <form id="contact-form" class="flex flex-col gap-6" onsubmit="handleFormSubmit(event)">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div class="flex flex-col gap-2">
+                                    <label for="form-name" class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Nombre Completo</label>
+                                    <input type="text" id="form-name" required class="w-full bg-background/50 border border-outline-variant/30 rounded-xl px-4 py-3 text-on-surface focus:border-accent focus:ring-4 focus:ring-accent/10 transition-all placeholder-on-surface-variant/40" placeholder="Ej. Carlos Pérez">
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label for="form-phone" class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Teléfono / Celular</label>
+                                    <input type="tel" id="form-phone" required class="w-full bg-background/50 border border-outline-variant/30 rounded-xl px-4 py-3 text-on-surface focus:border-accent focus:ring-4 focus:ring-accent/10 transition-all placeholder-on-surface-variant/40" placeholder="Ej. 5555 1234">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div class="flex flex-col gap-2">
+                                    <label for="form-email" class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Correo Electrónico</label>
+                                    <input type="email" id="form-email" required class="w-full bg-background/50 border border-outline-variant/30 rounded-xl px-4 py-3 text-on-surface focus:border-accent focus:ring-4 focus:ring-accent/10 transition-all placeholder-on-surface-variant/40" placeholder="Ej. carlos@correo.com">
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label for="form-service" class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Servicio de Interés</label>
+                                    <select id="form-service" required class="w-full bg-background/50 border border-outline-variant/30 rounded-xl px-4 py-3 text-on-surface focus:border-accent focus:ring-4 focus:ring-accent/10 transition-all">
+                                        <option value="" disabled selected>Selecciona un servicio</option>
+                                        <option value="Rótulos LED y Letras 3D">Rótulos LED y Letras 3D</option>
+                                        <option value="Impresión de Vinil y Banners">Impresión de Vinil y Banners</option>
+                                        <option value="Sublimación Personalizada">Sublimación Personalizada</option>
+                                        <option value="Diseño Gráfico y Branding">Diseño Gráfico y Branding</option>
+                                        <option value="Soluciones para Negocios">Soluciones para Negocios</option>
+                                        <option value="Otro Proyecto">Otro Proyecto</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <label for="form-message" class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Detalles de tu proyecto</label>
+                                <textarea id="form-message" rows="4" required class="w-full bg-background/50 border border-outline-variant/30 rounded-xl px-4 py-3 text-on-surface focus:border-accent focus:ring-4 focus:ring-accent/10 transition-all placeholder-on-surface-variant/40" placeholder="Describe medidas, colores o ideas de tu diseño..."></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 bg-accent text-white font-bold font-label-sm text-label-sm rounded-xl hover:bg-accent/80 active:scale-95 transition-all shadow-lg flex items-center justify-center gap-2">
+                                Solicitar cotización <span class="material-symbols-outlined text-[18px]">send</span>
+                            </button>
+                        </form>
+
+                        <!-- Success Alert Message (Hidden initially) -->
+                        <div id="form-success-toast" class="hidden absolute inset-0 bg-background/95 rounded-3xl flex flex-col items-center justify-center p-8 text-center backdrop-blur-md z-10 transition-all duration-300">
+                            <span class="material-symbols-outlined text-[64px] text-green-500 mb-4 animate-bounce">check_circle</span>
+                            <h3 class="text-headline-md font-bold mb-2">¡Mensaje Recibido con Éxito!</h3>
+                            <p class="text-on-surface-variant text-body-md mb-6 max-w-sm">Hemos registrado tu solicitud para el servicio de <span id="success-service-name" class="text-accent font-bold"></span>.</p>
+                            <div class="flex flex-col sm:flex-row gap-4 w-full">
+                                <a id="whatsapp-success-btn" target="_blank" class="flex-1 px-6 py-3.5 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold rounded-xl flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95 text-label-sm">
+                                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.504-5.731-1.464L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.863-9.73.001-2.595-1.006-5.038-2.834-6.87C16.673 2.186 14.24 1.18 11.648 1.18c-5.438 0-9.863 4.373-9.866 9.735-.002 1.702.451 3.361 1.309 4.837L2.09 20.396l4.557-1.242zM17.476 14.41c-.32-.16-1.89-.933-2.197-1.053-.313-.115-.536-.16-.763.18-.22.34-.87 1.093-1.063 1.319-.193.22-.39.25-.71.09-1.295-.648-2.155-1.15-3.003-2.61-.22-.38.22-.353.63-1.173.07-.13.03-.24-.01-.33-.04-.09-.36-.88-.5-1.21-.13-.31-.27-.27-.37-.27h-.32c-.1-.01-.28.03-.43.19-.15.16-.58.57-.58 1.39s.6 1.62.68 1.73c.09.12 1.182 1.802 2.864 2.528 1.198.518 1.636.568 2.22.483.382-.055 1.19-.487 1.356-.957.17-.47.17-.87.12-.957-.05-.08-.17-.13-.49-.29z"/></svg>
+                                    Cotizar por WhatsApp
+                                </a>
+                                <button onclick="resetContactForm()" class="flex-1 px-6 py-3.5 bg-surface border border-outline-variant/30 text-on-surface font-bold rounded-xl hover:bg-surface-container-high transition-all text-label-sm">
+                                    Enviar otro mensaje
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conversión de WhatsApp (Sección Destacada) -->
+        <section id="whatsapp-conversion" class="py-20 bg-surface-container-low border-b border-outline-variant/10 reveal-on-scroll">
+            <div class="max-w-4xl mx-auto px-gutter text-center flex flex-col items-center">
+                <div class="w-16 h-16 rounded-full bg-[#25D366]/10 flex items-center justify-center mb-6 animate-pulse">
+                    <svg class="w-8 h-8 fill-[#25D366]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.004 0C5.372 0 0 5.372 0 12.004c0 2.115.55 4.103 1.516 5.84L.273 23.364c-.11.397.262.77.659.66l5.77-1.576c1.693.896 3.606 1.4 5.617 1.4C18.636 23.848 24 18.476 24 11.848 24 5.372 18.632 0 12.004 0zm.04 21.688c-1.85 0-3.66-.484-5.263-1.405l-.377-.216-3.486.953.968-3.4-.238-.38c-.993-1.583-1.517-3.42-1.516-5.3.003-5.326 4.336-9.66 9.667-9.66 2.58 0 5.006 1.004 6.83 2.828a9.593 9.593 0 0 1 2.827 6.838c-.004 5.327-4.34 9.66-9.672 9.66zm5.228-7.234c-.286-.143-1.69-.834-1.952-.928-.26-.095-.45-.143-.64.143-.19.285-.736.927-.903 1.117-.166.19-.333.214-.62.072-1.127-.565-1.875-1.002-2.613-2.273-.19-.328.19-.304.545-1.012.06-.118.026-.225-.012-.32-.038-.095-.31-.75-.425-1.036-.11-.272-.224-.236-.31-.236H10.15c-.084-.007-.247.02-.38.163-.13.143-.51.498-.51 1.213s.522 1.405.594 1.5c.07.095 1.026 1.564 2.486 2.193 1.04.448 1.42.49 1.928.416.332-.047 1.032-.42 1.177-.828.147-.408.147-.758.104-.83-.043-.07-.152-.118-.438-.26z"/>
+                    </svg>
+                </div>
+                <h3 class="text-display-lg-mobile font-display-lg mb-4 text-on-surface">¿Necesitas una cotización rápida?</h3>
+                <p class="text-on-surface-variant text-body-lg mb-8 max-w-2xl">
+                    Escríbenos por WhatsApp y recibe atención personalizada al instante. Hacemos cotizaciones a medida en menos de 5 minutos y aclaramos todas tus dudas.
+                </p>
+                <a href="https://api.whatsapp.com/send?phone=50235354224&text=%C2%A1Hola%20L.Ortiz%20Design%21%20Quiero%20una%20cotizaci%C3%B3n%20r%C3%A1pida%20de%20un%20proyecto." target="_blank" class="px-10 py-5 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-2xl font-headline-md text-headline-md hover:shadow-2xl transition-all flex items-center justify-center gap-3 hover:scale-105 active:scale-95 shadow-[#25d366]/20 shadow-xl">
+                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.504-5.731-1.464L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.863-9.73.001-2.595-1.006-5.038-2.834-6.87C16.673 2.186 14.24 1.18 11.648 1.18c-5.438 0-9.863 4.373-9.866 9.735-.002 1.702.451 3.361 1.309 4.837L2.09 20.396l4.557-1.242zM17.476 14.41c-.32-.16-1.89-.933-2.197-1.053-.313-.115-.536-.16-.763.18-.22.34-.87 1.093-1.063 1.319-.193.22-.39.25-.71.09-1.295-.648-2.155-1.15-3.003-2.61-.22-.38.22-.353.63-1.173.07-.13.03-.24-.01-.33-.04-.09-.36-.88-.5-1.21-.13-.31-.27-.27-.37-.27h-.32c-.1-.01-.28.03-.43.19-.15.16-.58.57-.58 1.39s.6 1.62.68 1.73c.09.12 1.182 1.802 2.864 2.528 1.198.518 1.636.568 2.22.483.382-.055 1.19-.487 1.356-.957.17-.47.17-.87.12-.957-.05-.08-.17-.13-.49-.29z"/></svg>
+                    Chatear por WhatsApp
+                </a>
             </div>
         </section>
 
@@ -518,11 +1050,14 @@
                 <img src="assets/Logo%20LOrtiz%20Desing%20trazo%20negro.png" alt="L.Ortiz Design Logo" class="h-10 w-auto">
                 <p class="text-on-surface-variant text-body-md text-center md:text-left max-w-sm">Diseño creativo, rótulos LED, banners publicitarios y sublimación profesional en Guatemala. Explora. Crea. Innova.</p>
             </div>
-            <div class="flex gap-8 text-label-sm font-label-sm text-on-surface-variant">
+            <div class="flex flex-wrap justify-center gap-6 text-label-sm font-label-sm text-on-surface-variant">
                 <a class="hover:text-primary transition-colors" href="#inicio">Inicio</a>
+                <a class="hover:text-primary transition-colors" href="#nosotros">Nosotros</a>
                 <a class="hover:text-primary transition-colors" href="#servicios">Servicios</a>
                 <a class="hover:text-primary transition-colors" href="#portafolio">Portafolio</a>
-                <a class="hover:text-primary transition-colors" href="#confianza">Nosotros</a>
+                <a class="hover:text-primary transition-colors" href="#galeria">Galería</a>
+                <a class="hover:text-primary transition-colors" href="#faq">FAQ</a>
+                <a class="hover:text-primary transition-colors" href="#contacto">Contacto</a>
             </div>
         </div>
         <div class="max-w-container-max mx-auto mt-12 pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4 text-center">
@@ -602,6 +1137,43 @@
             if (e.key === 'Escape') closeLightbox();
         });
 
+        // Form submission handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            
+            const nameVal = document.getElementById('form-name').value;
+            const phoneVal = document.getElementById('form-phone').value;
+            const emailVal = document.getElementById('form-email').value;
+            const serviceVal = document.getElementById('form-service').value;
+            const messageVal = document.getElementById('form-message').value;
+            
+            // Populate success modal elements
+            document.getElementById('success-service-name').innerText = serviceVal;
+            
+            // Create WhatsApp redirect URL
+            const wpPhone = "50235354224";
+            const rawText = `¡Hola L.Ortiz Design! Mi nombre es *${nameVal}*, mi celular es *${phoneVal}* y mi correo es *${emailVal}*.\n\nEstoy interesado en el servicio de: *${serviceVal}*.\n\nDetalles de mi proyecto:\n_${messageVal}_`;
+            const wpUrl = `https://api.whatsapp.com/send?phone=${wpPhone}&text=${encodeURIComponent(rawText)}`;
+            
+            // Configure the button
+            const wpBtn = document.getElementById('whatsapp-success-btn');
+            wpBtn.href = wpUrl;
+            
+            // Show success overlay toast
+            const toast = document.getElementById('form-success-toast');
+            toast.classList.remove('hidden');
+            toast.classList.add('flex');
+        }
+        
+        function resetContactForm() {
+            const form = document.getElementById('contact-form');
+            form.reset();
+            
+            const toast = document.getElementById('form-success-toast');
+            toast.classList.remove('flex');
+            toast.classList.add('hidden');
+        }
+
         // Header active states and scroll effects
         document.addEventListener('DOMContentLoaded', () => {
             const header = document.querySelector('header');
@@ -642,6 +1214,105 @@
                     });
                 });
             });
+
+            // Gallery filter controller
+            const galleryFilterBtns = document.querySelectorAll('.gallery-filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            galleryFilterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active button styles
+                    galleryFilterBtns.forEach(b => {
+                        b.classList.remove('bg-accent', 'text-white', 'border-transparent');
+                        b.classList.add('text-on-surface-variant', 'hover:text-primary', 'hover:border-primary', 'bg-surface', 'border-outline-variant');
+                    });
+                    btn.classList.add('bg-accent', 'text-white', 'border-transparent');
+                    btn.classList.remove('text-on-surface-variant', 'hover:text-primary', 'hover:border-primary', 'bg-surface', 'border-outline-variant');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    // Filter cards
+                    galleryItems.forEach(item => {
+                        const category = item.getAttribute('data-category');
+                        if (filterValue === 'all' || category === filterValue) {
+                            item.classList.remove('hidden');
+                            item.classList.add('animate-fade-in-scale');
+                        } else {
+                            item.classList.add('hidden');
+                            item.classList.remove('animate-fade-in-scale');
+                        }
+                    });
+                });
+            });
+
+            // FAQ Accordion logic
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const header = item.querySelector('.faq-header');
+                const content = item.querySelector('.faq-content');
+                const icon = item.querySelector('.faq-icon');
+                
+                header.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all FAQ items
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.faq-content').style.maxHeight = null;
+                        otherItem.querySelector('.faq-icon').classList.remove('rotate-180');
+                    });
+                    
+                    // Open the clicked one
+                    if (!isActive) {
+                        item.classList.add('active');
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        icon.classList.add('rotate-180');
+                    }
+                });
+            });
+
+            // Scroll reveal observer
+            const revealItems = document.querySelectorAll('.reveal-on-scroll');
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.05, rootMargin: '0px 0px -50px 0px' });
+            revealItems.forEach(item => revealObserver.observe(item));
+
+            // Animated counters logic
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = +counter.getAttribute('data-target');
+                        let count = 0;
+                        const duration = 1200; // total animation time in ms
+                        const stepTime = 15;
+                        const totalSteps = duration / stepTime;
+                        const increment = target / totalSteps;
+                        
+                        const updateCounter = () => {
+                            count += increment;
+                            if (count < target) {
+                                counter.innerText = Math.floor(count);
+                                setTimeout(updateCounter, stepTime);
+                            } else {
+                                counter.innerText = target;
+                            }
+                        };
+                        
+                        updateCounter();
+                        counterObserver.unobserve(counter);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            const counters = document.querySelectorAll('.stat-counter');
+            counters.forEach(c => counterObserver.observe(c));
         });
     </script>
 </body>
