@@ -560,119 +560,71 @@
         </section>
 
         <!-- Galería de Proyectos Reales Section -->
+        <!-- Galería de Proyectos Reales Section (Diseño Interactivo Inmersivo) -->
         <section id="galeria" class="py-28 bg-surface-container-lowest border-b border-outline-variant/10 reveal-on-scroll">
             <div class="max-w-container-max mx-auto px-gutter">
                 <div class="text-center mb-16 max-w-2xl mx-auto">
-                    <span class="text-accent font-bold text-label-sm font-label-sm uppercase tracking-widest block mb-3">Trabajos en Campo</span>
+                    <span class="text-accent font-bold text-label-sm font-label-sm uppercase tracking-widest block mb-3">Exhibición Interactiva</span>
                     <h2 class="text-display-lg-mobile font-display-lg mb-4 text-on-surface">Galería de Proyectos Reales</h2>
-                    <p class="text-on-surface-variant text-body-md">Fotografías reales de instalaciones y productos finalizados para nuestros clientes en todo el país.</p>
+                    <p class="text-on-surface-variant text-body-md">Selecciona una categoría a la derecha para explorar fotos y descripciones detalladas de nuestras instalaciones reales.</p>
                 </div>
 
-                <!-- Gallery Filters -->
-                <div class="flex flex-wrap justify-center gap-3 mb-12 select-none">
-                    <button class="gallery-filter-btn px-6 py-2.5 rounded-full font-bold text-label-sm font-label-sm transition-all bg-accent text-white border border-transparent active:scale-95" data-filter="all">Todos</button>
-                    <button class="gallery-filter-btn px-6 py-2.5 rounded-full font-bold text-label-sm font-label-sm transition-all border border-outline-variant text-on-surface-variant hover:text-primary hover:border-primary bg-surface active:scale-95" data-filter="rotulos">Rótulos</button>
-                    <button class="gallery-filter-btn px-6 py-2.5 rounded-full font-bold text-label-sm font-label-sm transition-all border border-outline-variant text-on-surface-variant hover:text-primary hover:border-primary bg-surface active:scale-95" data-filter="viniles">Viniles</button>
-                    <button class="gallery-filter-btn px-6 py-2.5 rounded-full font-bold text-label-sm font-label-sm transition-all border border-outline-variant text-on-surface-variant hover:text-primary hover:border-primary bg-surface active:scale-95" data-filter="letras-3d">Letras 3D</button>
-                    <button class="gallery-filter-btn px-6 py-2.5 rounded-full font-bold text-label-sm font-label-sm transition-all border border-outline-variant text-on-surface-variant hover:text-primary hover:border-primary bg-surface active:scale-95" data-filter="sublimacion">Sublimación</button>
-                    <button class="gallery-filter-btn px-6 py-2.5 rounded-full font-bold text-label-sm font-label-sm transition-all border border-outline-variant text-on-surface-variant hover:text-primary hover:border-primary bg-surface active:scale-95" data-filter="instalaciones">Instalaciones</button>
-                    <button class="gallery-filter-btn px-6 py-2.5 rounded-full font-bold text-label-sm font-label-sm transition-all border border-outline-variant text-on-surface-variant hover:text-primary hover:border-primary bg-surface active:scale-95" data-filter="antes-despues">Antes y Después</button>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Gallery Item 1: Rótulos -->
-                    <div class="gallery-item group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2 relative shadow-lg" data-category="rotulos">
-                        <div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="openLightbox('assets/led_sign_neon.png', 'Rótulo LED Neón Coffee')">
-                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none select-none" alt="Rótulos en Guatemala - Letrero LED luminoso fabricado por L.Ortiz Design" src="assets/led_sign_neon.png" draggable="false"/>
-                            <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                                <span class="bg-accent text-white w-12 h-12 rounded-xl flex items-center justify-center hover:scale-105 transition-transform"><span class="material-symbols-outlined">zoom_in</span></span>
+                <!-- Showcase Panel -->
+                <div class="relative w-full min-h-[580px] lg:h-[550px] rounded-[32px] overflow-hidden border border-outline-variant/15 shadow-2xl flex flex-col justify-end lg:justify-center">
+                    <!-- Background Layer (with smooth fade-in and glow overlays) -->
+                    <div id="gallery-bg-image" class="absolute inset-0 bg-cover bg-center transition-all duration-500 scale-100" style="background-image: url('assets/led_sign_neon.png'); transform-origin: center;"></div>
+                    <!-- Ambient overlay to ensure high readability of text (Horizontal gradient on desktop, vertical on mobile) -->
+                    <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-background via-background/90 lg:via-background/75 to-background/40 lg:to-background/10 z-0"></div>
+                    
+                    <!-- Content grid -->
+                    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-6 md:p-12 h-full">
+                        <!-- Left Side: Dynamic Texts -->
+                        <div class="lg:col-span-7 flex flex-col justify-center max-w-xl">
+                            <span class="text-accent font-bold text-[12px] tracking-widest uppercase mb-4 block">Visualizando Trabajos Reales</span>
+                            <h3 id="gallery-title" class="text-3xl md:text-4xl font-display-lg text-white font-extrabold mb-6 leading-tight transition-opacity duration-300">
+                                Letreros y Rótulos Luminosos
+                            </h3>
+                            <p id="gallery-desc" class="text-on-surface-variant text-body-md mb-8 leading-relaxed transition-opacity duration-300">
+                                Fabricamos rótulos LED de alta luminosidad y bajo consumo, cajas de luz y letreros para publicidad exterior de alto impacto de día y de noche. Ideal para destacar tu local comercial.
+                            </p>
+                            <div class="flex flex-wrap gap-4">
+                                <a id="gallery-cta" href="https://api.whatsapp.com/send?phone=50235354224&text=%C2%A1Hola%20L.Ortiz%20Design%21%20Me%20interesa%20una%20cotizaci%C3%B3n%20para%20R%C3%B3tulos%20LED%20y%20Letreros%20Luminosos." target="_blank" class="px-8 py-4 accent-gradient-btn text-white rounded-2xl font-bold font-label-sm text-label-sm flex items-center gap-2 hover:scale-105 transition-all shadow-lg shadow-accent/20">
+                                    Cotizar esta solución <span class="material-symbols-outlined text-[18px]">bolt</span>
+                                </a>
+                                <button id="gallery-zoom-btn" onclick="openGalleryLightbox()" class="px-6 py-4 bg-surface-container/60 hover:bg-surface-container border border-outline-variant/30 text-white rounded-2xl font-bold font-label-sm text-label-sm flex items-center gap-2 transition-all">
+                                    Ver Foto Completa <span class="material-symbols-outlined text-[18px]">zoom_in</span>
+                                </button>
                             </div>
                         </div>
-                        <div class="p-6">
-                            <h4 class="text-headline-md font-headline-md mb-2 text-on-surface">Rótulo LED Luminoso</h4>
-                            <p class="text-on-surface-variant text-label-sm font-label-sm">Rótulos en Guatemala / Letreros Luminosos</p>
+                        
+                        <!-- Right Side: Interactive Categories List -->
+                        <div class="lg:col-span-5 flex flex-col gap-3 pl-0 lg:pl-10 border-l-0 lg:border-l border-outline-variant/15 mt-8 lg:mt-0 select-none">
+                            <button class="gallery-tab-btn flex items-center gap-3 text-left py-3 px-4 rounded-xl focus:outline-none transition-all group font-headline-md text-headline-md text-white font-bold bg-surface-container/50 border border-outline-variant/20 shadow-inner" data-tab="rotulos">
+                                <span class="material-symbols-outlined text-accent text-[20px] transition-transform duration-300 group-hover:translate-x-1">play_arrow</span>
+                                <span>Rótulos LED y Neón</span>
+                            </button>
+                            <button class="gallery-tab-btn flex items-center gap-3 text-left py-3 px-4 rounded-xl focus:outline-none transition-all group font-headline-md text-headline-md text-on-surface-variant hover:text-white" data-tab="viniles">
+                                <span class="material-symbols-outlined text-accent text-[20px] opacity-0 transition-all group-hover:translate-x-1">play_arrow</span>
+                                <span>Impresión de Vinil y Banners</span>
+                            </button>
+                            <button class="gallery-tab-btn flex items-center gap-3 text-left py-3 px-4 rounded-xl focus:outline-none transition-all group font-headline-md text-headline-md text-on-surface-variant hover:text-white" data-tab="letras-3d">
+                                <span class="material-symbols-outlined text-accent text-[20px] opacity-0 transition-all group-hover:translate-x-1">play_arrow</span>
+                                <span>Letras 3D Corpóreas</span>
+                            </button>
+                            <button class="gallery-tab-btn flex items-center gap-3 text-left py-3 px-4 rounded-xl focus:outline-none transition-all group font-headline-md text-headline-md text-on-surface-variant hover:text-white" data-tab="sublimacion">
+                                <span class="material-symbols-outlined text-accent text-[20px] opacity-0 transition-all group-hover:translate-x-1">play_arrow</span>
+                                <span>Sublimación Personalizada</span>
+                            </button>
+                            <button class="gallery-tab-btn flex items-center gap-3 text-left py-3 px-4 rounded-xl focus:outline-none transition-all group font-headline-md text-headline-md text-on-surface-variant hover:text-white" data-tab="instalaciones">
+                                <span class="material-symbols-outlined text-accent text-[20px] opacity-0 transition-all group-hover:translate-x-1">play_arrow</span>
+                                <span>Instalaciones en Altura</span>
+                            </button>
+                            <button class="gallery-tab-btn flex items-center gap-3 text-left py-3 px-4 rounded-xl focus:outline-none transition-all group font-headline-md text-headline-md text-on-surface-variant hover:text-white" data-tab="antes-despues">
+                                <span class="material-symbols-outlined text-accent text-[20px] opacity-0 transition-all group-hover:translate-x-1">play_arrow</span>
+                                <span>Antes y Después</span>
+                            </button>
                         </div>
                     </div>
-
-                    <!-- Gallery Item 2: Viniles -->
-                    <div class="gallery-item group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2 relative shadow-lg" data-category="viniles">
-                        <div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="openLightbox('assets/Manta Hugo Ricardo.jpg', 'Impresión de Vinil y Banners')">
-                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none select-none" alt="Impresión de vinil en Guatemala - Vinil autoadhesivo impreso de alta definición" src="assets/Manta%20Hugo%20Ricardo.jpg" draggable="false"/>
-                            <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                                <span class="bg-accent text-white w-12 h-12 rounded-xl flex items-center justify-center hover:scale-105 transition-transform"><span class="material-symbols-outlined">zoom_in</span></span>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h4 class="text-headline-md font-headline-md mb-2 text-on-surface">Impresión de Vinil Autoadhesivo</h4>
-                            <p class="text-on-surface-variant text-label-sm font-label-sm">Impresión de Vinil / Publicidad Exterior</p>
-                        </div>
-                    </div>
-
-                    <!-- Gallery Item 3: Letras 3D -->
-                    <div class="gallery-item group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2 relative shadow-lg" data-category="letras-3d">
-                        <div class="aspect-[4/3] relative overflow-hidden cursor-pointer flex flex-col justify-center items-center bg-surface-container/40 p-8 border-b border-outline-variant/10">
-                            <span class="material-symbols-outlined text-[64px] text-accent/40 mb-4 group-hover:scale-110 transition-transform">photo_camera</span>
-                            <span class="px-3 py-1 rounded-full bg-accent/10 text-accent border border-accent/20 text-[11px] font-label-sm uppercase tracking-wider mb-2">Listo para Foto Real</span>
-                            <p class="text-[12px] text-on-surface-variant/70 text-center max-w-[200px]">Letras 3D Corpóreas instaladas recientemente.</p>
-                        </div>
-                        <div class="p-6">
-                            <h4 class="text-headline-md font-headline-md mb-2 text-on-surface">Letras 3D Corpóreas</h4>
-                            <p class="text-on-surface-variant text-label-sm font-label-sm">Letras 3D / Acrílico y PVC</p>
-                        </div>
-                    </div>
-
-                    <!-- Gallery Item 4: Sublimación -->
-                    <div class="gallery-item group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2 relative shadow-lg" data-category="sublimacion">
-                        <div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="openLightbox('assets/sublimation_mug_shirt.png', 'Sublimación de Artículos Promocionales')">
-                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none select-none" alt="Sublimación personalizada en Guatemala - playeras y tazas impresas" src="assets/sublimation_mug_shirt.png" draggable="false"/>
-                            <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                                <span class="bg-accent text-white w-12 h-12 rounded-xl flex items-center justify-center hover:scale-105 transition-transform"><span class="material-symbols-outlined">zoom_in</span></span>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h4 class="text-headline-md font-headline-md mb-2 text-on-surface">Sublimación de Promocionales</h4>
-                            <p class="text-on-surface-variant text-label-sm font-label-sm">Sublimación Personalizada / Playeras y Tazas</p>
-                        </div>
-                    </div>
-
-                    <!-- Gallery Item 5: Instalaciones -->
-                    <div class="gallery-item group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2 relative shadow-lg" data-category="instalaciones">
-                        <div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="openLightbox('assets/para mantas lortiz.jpg', 'Instalación de Publicidad Exterior')">
-                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none select-none" alt="Instalaciones publicitarias y montaje de mantas por L.Ortiz Design" src="assets/para%20mantas%20lortiz.jpg" draggable="false"/>
-                            <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                                <span class="bg-accent text-white w-12 h-12 rounded-xl flex items-center justify-center hover:scale-105 transition-transform"><span class="material-symbols-outlined">zoom_in</span></span>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h4 class="text-headline-md font-headline-md mb-2 text-on-surface">Instalación en Altura</h4>
-                            <p class="text-on-surface-variant text-label-sm font-label-sm">Publicidad Exterior / Montaje Profesional</p>
-                        </div>
-                    </div>
-
-                    <!-- Gallery Item 6: Antes y después -->
-                    <div class="gallery-item group rounded-3xl overflow-hidden glass-card transition-all duration-500 hover:-translate-y-2 relative shadow-lg" data-category="antes-despues">
-                        <div class="aspect-[4/3] relative overflow-hidden cursor-pointer flex flex-col justify-center items-center bg-surface-container/40 p-8 border-b border-outline-variant/10">
-                            <div class="flex gap-4 mb-4">
-                                <span class="px-2 py-1 bg-surface-container-high rounded text-[11px] font-bold text-on-surface-variant">ANTERIOR</span>
-                                <span class="material-symbols-outlined text-accent text-[24px] self-center">arrow_forward</span>
-                                <span class="px-2 py-1 bg-accent rounded text-[11px] font-bold text-white">NUEVO</span>
-                            </div>
-                            <span class="px-3 py-1 rounded-full bg-accent/10 text-accent border border-accent/20 text-[11px] font-label-sm uppercase tracking-wider mb-2">Listo para Comparación</span>
-                            <p class="text-[12px] text-on-surface-variant/70 text-center max-w-[200px]">Cambios drásticos de fachadas y locales.</p>
-                        </div>
-                        <div class="p-6">
-                            <h4 class="text-headline-md font-headline-md mb-2 text-on-surface">Renovación de Fachada Comercial</h4>
-                            <p class="text-on-surface-variant text-label-sm font-label-sm">Antes y Después / Rotulación Exterior</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- CTA integrado de la galería -->
-                <div class="mt-16 text-center">
-                    <p class="text-on-surface-variant text-body-md mb-4">¿Quieres ver tu propio negocio en esta lista?</p>
-                    <a href="#contacto" class="px-8 py-4 accent-gradient-btn text-white rounded-2xl font-bold font-label-sm text-label-sm inline-flex items-center gap-2">
-                        Cotiza en menos de 2 minutos <span class="material-symbols-outlined text-[18px]">bolt</span>
-                    </a>
                 </div>
             </div>
         </section>
@@ -802,6 +754,12 @@
                                 <p class="font-bold text-on-surface text-label-sm">L.Ortiz Design</p>
                                 <p class="text-[12px] text-on-surface-variant">Asesoría de Branding &amp; Publicidad</p>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Preguntas Frecuentes Section -->
         <section id="faq" class="py-28 bg-surface-container-low border-b border-outline-variant/10 reveal-on-scroll">
             <div class="max-w-4xl mx-auto px-gutter">
@@ -920,7 +878,7 @@
                                 </div>
                                 <div>
                                     <p class="text-xs text-on-surface-variant uppercase font-bold tracking-wider">Correo Electrónico</p>
-                                    <p class="text-on-surface font-bold font-headline-md">info@lortizdesign.com</p>
+                                    <p class="text-on-surface font-bold font-headline-md">lortizdesigner23@gmail.com</p>
                                 </div>
                             </div>
                             <div class="flex items-center gap-4">
@@ -1215,33 +1173,97 @@
                 });
             });
 
-            // Gallery filter controller
-            const galleryFilterBtns = document.querySelectorAll('.gallery-filter-btn');
-            const galleryItems = document.querySelectorAll('.gallery-item');
+            // Interactive Gallery Logic
+            const galleryData = {
+                rotulos: {
+                    title: "Letreros y Rótulos Luminosos",
+                    desc: "Fabricamos rótulos LED de alta luminosidad y bajo consumo, cajas de luz y letreros para publicidad exterior de alto impacto de día y de noche. Ideal para destacar tu local comercial.",
+                    img: "assets/led_sign_neon.png",
+                    wpText: "¡Hola L.Ortiz Design! Me interesa una cotización para Rótulos LED y Letreros Luminosos."
+                },
+                viniles: {
+                    title: "Impresión de Vinil y Banners",
+                    desc: "Impresiones de gran formato en lona y vinil autoadhesivo mate, brillante o microperforado para cristales y ventanas. Acabados nítidos, resistentes a la intemperie y de larga duración.",
+                    img: "assets/Manta Hugo Ricardo.jpg",
+                    wpText: "¡Hola L.Ortiz Design! Me interesa una cotización para Impresión de Vinil y Banners."
+                },
+                "letras-3d": {
+                    title: "Letras 3D Corpóreas",
+                    desc: "Diseño y modelado de letras en relieve recortadas en acrílico, PVC, acero inoxidable, aluminio o madera con o sin retroiluminación LED. Dale elegancia tridimensional a tu oficina.",
+                    img: "assets/Logo LOrtiz Desing trazo blanco.png",
+                    wpText: "¡Hola L.Ortiz Design! Me interesa una cotización para Letras 3D Corpóreas."
+                },
+                sublimacion: {
+                    title: "Sublimación Personalizada",
+                    desc: "Estampado de alta fidelidad para playeras, gorras, tazas cerámicas, uniformes y artículos promocionales corporativos. Excelente nitidez y durabilidad ante lavadas.",
+                    img: "assets/sublimation_mug_shirt.png",
+                    wpText: "¡Hola L.Ortiz Design! Me interesa una cotización para Sublimación Personalizada."
+                },
+                instalaciones: {
+                    title: "Instalaciones en Campo",
+                    desc: "Contamos con personal especializado para el montaje seguro de letreros en altura, rotulación en locales comerciales y colocación de viniles en ventanas y fachadas.",
+                    img: "assets/para mantas lortiz.jpg",
+                    wpText: "¡Hola L.Ortiz Design! Me interesa cotizar una Instalación o Montaje."
+                },
+                "antes-despues": {
+                    title: "Transformaciones Antes y Después",
+                    desc: "Compara el cambio drástico de fachadas comerciales de nuestros clientes. Rediseñamos y modernizamos la imagen exterior de tu local físico para atraer más visitas.",
+                    img: "assets/creative_stationery.png",
+                    wpText: "¡Hola L.Ortiz Design! Me interesa cotizar una renovación Antes y Después de mi local."
+                }
+            };
 
-            galleryFilterBtns.forEach(btn => {
+            let currentGalleryTab = "rotulos";
+            const galleryTabBtns = document.querySelectorAll('.gallery-tab-btn');
+            const galleryBgImage = document.getElementById('gallery-bg-image');
+            const galleryTitle = document.getElementById('gallery-title');
+            const galleryDesc = document.getElementById('gallery-desc');
+            const galleryCta = document.getElementById('gallery-cta');
+
+            // Global function to open lightbox from interactive gallery
+            window.openGalleryLightbox = function() {
+                const activeData = galleryData[currentGalleryTab];
+                if (activeData) {
+                    openLightbox(activeData.img, activeData.title);
+                }
+            };
+
+            galleryTabBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
-                    // Update active button styles
-                    galleryFilterBtns.forEach(b => {
-                        b.classList.remove('bg-accent', 'text-white', 'border-transparent');
-                        b.classList.add('text-on-surface-variant', 'hover:text-primary', 'hover:border-primary', 'bg-surface', 'border-outline-variant');
-                    });
-                    btn.classList.add('bg-accent', 'text-white', 'border-transparent');
-                    btn.classList.remove('text-on-surface-variant', 'hover:text-primary', 'hover:border-primary', 'bg-surface', 'border-outline-variant');
+                    const tabKey = btn.getAttribute('data-tab');
+                    const tabData = galleryData[tabKey];
+                    if (!tabData) return;
 
-                    const filterValue = btn.getAttribute('data-filter');
+                    currentGalleryTab = tabKey;
 
-                    // Filter cards
-                    galleryItems.forEach(item => {
-                        const category = item.getAttribute('data-category');
-                        if (filterValue === 'all' || category === filterValue) {
-                            item.classList.remove('hidden');
-                            item.classList.add('animate-fade-in-scale');
-                        } else {
-                            item.classList.add('hidden');
-                            item.classList.remove('animate-fade-in-scale');
-                        }
+                    // Update active button classes
+                    galleryTabBtns.forEach(b => {
+                        b.classList.remove('bg-surface-container/50', 'border', 'border-outline-variant/20', 'shadow-inner', 'text-white', 'font-bold');
+                        b.classList.add('text-on-surface-variant', 'hover:text-white');
+                        const arrow = b.querySelector('.material-symbols-outlined');
+                        if (arrow) arrow.classList.add('opacity-0');
                     });
+
+                    btn.classList.add('bg-surface-container/50', 'border', 'border-outline-variant/20', 'shadow-inner', 'text-white', 'font-bold');
+                    btn.classList.remove('text-on-surface-variant', 'hover:text-white');
+                    const arrow = btn.querySelector('.material-symbols-outlined');
+                    if (arrow) arrow.classList.remove('opacity-0');
+
+                    // Smooth transition for content
+                    galleryBgImage.style.opacity = '0';
+                    galleryTitle.style.opacity = '0';
+                    galleryDesc.style.opacity = '0';
+
+                    setTimeout(() => {
+                        galleryBgImage.style.backgroundImage = `url('${tabData.img}')`;
+                        galleryTitle.innerText = tabData.title;
+                        galleryDesc.innerText = tabData.desc;
+                        galleryCta.href = `https://api.whatsapp.com/send?phone=50235354224&text=${encodeURIComponent(tabData.wpText)}`;
+                        
+                        galleryBgImage.style.opacity = '1';
+                        galleryTitle.style.opacity = '1';
+                        galleryDesc.style.opacity = '1';
+                    }, 250);
                 });
             });
 
